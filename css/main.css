@@ -1,0 +1,68 @@
+.container{
+    max-width: 1140px;
+}
+
+/* --------------------------- category start -------------------------------- */
+.category{
+    background: radial-gradient(95.56% 95.56% at 50% 50%,#fff 0,#bddeff 100%);
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+}
+.category img{
+    transition: scale .2s linear;
+}
+.category:hover img{
+    scale: 1.1;
+}
+/* --------------------------- category end -------------------------------- */
+
+/* --------------------------- trending products start -------------------------------- */
+.trending-head-tabs::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 110%;
+    width: 400px;
+    height: 2px;
+    background-color: #f0f2f4;
+}
+.trending-head-tabs a.active{
+    color: #000000;
+}
+.product-card img{
+    transition: scale .2s linear;
+}
+.product-card:hover img{
+    scale: 1.06;
+    cursor: pointer;
+}
+.card-widget{
+    position: absolute;
+    left: -10px;
+    bottom: 20px;
+    opacity: 0;
+    transition: all .2s linear;
+}
+.product-card:hover .card-widget{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 1;
+}
+@media (max-width:992px) {
+    .trending-head-tabs::after{
+        width: 200px;
+    }
+}
+@media (max-width:768px) {
+    .trending-head-tabs::after{
+        width: 100px;
+    }
+}
+@media (max-width:576px) {
+    .trending-head-tabs::after{
+        width: 100px;
+    }
+}
+/* --------------------------- trending products end -------------------------------- */
