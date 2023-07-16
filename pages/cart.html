@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Details</title>
+    <!-- remix-icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" />
+    <!-- google-font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind-css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- main-css -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<!-- component -->
+<!-- Create By Joker Banny -->
+<style>
+    @layer utilities {
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+</style>
+
+<body>
+    <!-- header start -->
+    <header class="border-b">
+        <div class="container mx-auto py-4 flex justify-between items-center">
+            <div class="logo"><img src="../images/logo.svg" alt=""></div>
+            <div>
+                <div class="search-box border-2 border-blue-100 lg:block hidden">
+                    <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
+                        placeholder="Search for Products...">
+                    <select name="" id=""
+                        class="border-s border-gray-300 px-3 cursor-pointer focus-within:outline-none">
+                        <option value="">Select Category</option>
+                        <option value="">Electronics</option>
+                        <option value="">Fashion</option>
+                        <option value="">Beauty</option>
+                    </select>
+                    <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
+                            class="ri-search-line"></i></button>
+                </div>
+            </div>
+            <div class="icon flex items-center">
+                <div class="flex items-center me-12">
+                    <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
+                            class="ri-user-line text-gray-500"></i></span>
+                    <div>
+                        <small class="text-gray-400 font-semibold">Hello,</small>
+                        <div class="text-sm text-gray-500 font-semibold">Sign In</div>
+                    </div>
+                </div>
+                <div class="text-2xl text-gray-700">
+                    <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
+                    <a href="#" class="  ms-2 hover:text-blue-100">
+                        <i class="ri-heart-3-line"></i>
+                        <span
+                            class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
+                    </a>
+                    <a href="./pages/cart.html" class="relative ms-2 hover:text-blue-100">
+                        <i class="ri-shopping-bag-line"></i>
+                        <span
+                            class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="sticky top-0 z-10 bg-white">
+        <div class="container max-w-screen-xl mx-auto">
+            <div class="flex items-center text-sm justify-between">
+                <div class="w-1/2 md:w-1/4">
+                    <div
+                        class="bg-blue-100 text-white py-3 px-5 me-7 cursor-pointer hover:bg-blue-300 transition duration-500 ease">
+                        <i class="ri-menu-2-line text-xl align-middle"></i> All Departments <i
+                            class="ri-arrow-down-s-line float-right text-xl"></i>
+                    </div>
+                </div>
+                <div class="lg:w-3/5 lg:block hidden">
+                    <ul class="flex items-center gap-4">
+                        <li><a class="py-3" href="../index.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a class="py-3" href="#">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a class="py-3" href="#">Shop <i class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a class="py-3" href="#">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a class="py-3" href="#">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a class="py-3" href="#">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center">
+                    <i class="ri-phone-line text-2xl me-2 text-blue-100 align-middle"></i>
+                    <div>
+                        <small class="text-gray-500 font-semibold">Hotline:</small>
+                        <div class="text-gray-600 font-bold"> +(123)-456-7891</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- header end -->
+
+    <div class="container mx-auto mt-10">
+        <div class="flex flex-wrap my-10">
+            <div class="w-full lg:w-3/4 bg-white py-10 pe-3">
+                <h1 class="font-semibold text-3xl border-b pb-8">Shopping Cart</h1>
+                <div class="flex py-4 mb-5 bg-slate-100 px-6">
+                    <h3 class="font-bold text-gray-700 text-xs w-2/5">Product Details</h3>
+                    <h3 class="font-bold text-gray-700 text-xs w-1/5 text-center">Quantity
+                    </h3>
+                    <h3 class="font-bold text-gray-700 text-xs w-1/5 text-center">Price</h3>
+                    <h3 class="font-bold text-gray-700 text-xs w-1/5 text-center">Total</h3>
+                </div>
+
+                <!-- product info start -->
+                <div id="cart-product-list">
+                    <div class="flex items-center hover:bg-gray-100 px-6 py-5">
+                        <div class="flex w-2/5 items-center">
+                            <div class="w-20">
+                                <img class="h-24" src="../images/products/bluetooth/bluetooth-1.webp" alt="">
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <h5 class="font-medium text-sm">Lenovo Sports Bluetooth</h5>
+                                <a href="#" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-center w-1/5">
+                            <button class="hover:text-blue-100 text-gray-600">
+                                <svg class="fill-current w-3" viewBox="0 0 448 512">
+                                    <path
+                                        d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                                </svg>
+                            </button>
+                            <input class="mx-2 border text-center w-8" type="text" value="1">
+                            <button class="hover:text-blue-100 text-gray-600">
+                                <svg class="fill-current w-3" viewBox="0 0 448 512">
+                                    <path
+                                        d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <span id="cart-item-price" class="text-center w-1/5 font-semibold text-sm">1299</span>
+                        <span id="cart-item-total" class="text-center w-1/5 font-semibold text-sm">1299</span>
+                    </div>
+                </div>
+                <!-- product info end -->
+
+                <a href="#" class="flex font-semibold text-blue-100 text-sm mt-10">
+                    <svg class="fill-current mr-2 text-blue-100 w-4" viewBox="0 0 448 512">
+                        <path
+                            d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+                    </svg>
+                    Continue Shopping
+                </a>
+            </div>
+
+            <div id="summary" class="w-full mt-5 lg:mt-0 lg:w-1/4 py-6">
+                <div class="lg:sticky top-12 shadow-lg px-8 py-4">
+                    <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
+                    <div class="flex justify-between my-5">
+                        <span class="font-semibold text-sm uppercase" id="total-items">Items (1)</span>
+                        <span class="font-medium text-sm">1299</span>
+                    </div>
+                    <div>
+                        <label class="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
+                        <select class="block p-2 text-gray-600 w-full text-sm">
+                            <option>Standard shipping - Free</option>
+                        </select>
+                    </div>
+                    <div class="py-6">
+                        <label for="promo" class="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
+                        <input type="text" id="promo" placeholder="Enter your code" class="p-2 text-sm w-full">
+                    </div>
+                    <button class="bg-blue-100 hover:bg-blue-100 px-5 py-2 text-sm text-white uppercase">Apply</button>
+                    <div class="border-t mt-8">
+                        <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+                            <span>Total cost</span>
+                            <span id="total-amt">1299</span>
+                        </div>
+                        <button
+                            class="bg-blue-400 font-semibold hover:bg-blue-100 duration-200 ease-in py-3 text-sm text-white uppercase w-full">Checkout</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        window.addEventListener('load', cartProduct)
+        function cartProduct() {
+            const wrapper = document.querySelector('#cart-product-list')
+            const totalItems = document.querySelector('#total-items')
+            const totalAmt = document.querySelector('#total-amt')
+            const cartProductsData = JSON.parse(localStorage.getItem('cart_products'))
+            // console.log(cartProductsData)
+            if (cartProductsData) {
+                let temp = ''
+                let totalItemsCount = 0
+                let netTotal = 0
+                cartProductsData.forEach((e) => {
+                    const markup = ` <div class="flex items-center hover:bg-gray-100 px-6 py-5">
+                <div class="flex w-2/5 items-center">
+                    <div class="w-20">
+                        <img class="h-24" src=${e.images.cart} alt="">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <h5 class="font-medium text-sm">${e.name}</h5>
+                        <button onclick="removeItem('${e._id}')" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</button>
+                    </div>
+                </div>
+                <div class="flex justify-center w-1/5">
+                    <button class="hover:text-blue-100 text-gray-600">
+                        <svg class="fill-current w-3" viewBox="0 0 448 512">
+                            <path
+                                d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                        </svg>
+                    </button>
+                    <input class="mx-2 border text-center w-8" type="text" value="${e.orderQuantity}">
+                    <button class="hover:text-blue-100 text-gray-600">
+                        <svg class="fill-current w-3" viewBox="0 0 448 512">
+                            <path
+                                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                        </svg>
+                    </button>
+                </div>
+                <span id="cart-item-price" class="text-center w-1/5 font-semibold text-sm">${e.price}</span>
+                <span id="cart-item-total" class="text-center w-1/5 font-semibold text-sm">${e.price * e.orderQuantity}</span>
+            </div>`
+                    temp += markup
+                    totalItemsCount += e.orderQuantity
+                    netTotal += (e.price*e.orderQuantity)
+                })
+
+                wrapper.innerHTML = temp
+                totalItems.innerText = `Items (${totalItemsCount})`
+                totalItems.nextElementSibling.innerText = netTotal
+                totalAmt.innerText = netTotal
+            }
+
+        }
+
+        // delete item
+        function removeItem(id){
+            const cartData = JSON.parse(localStorage.getItem('cart_products'))
+            const updatedList = cartData.filter((e)=>{
+                if(!(e._id === id)) return e
+            })
+            localStorage.setItem('cart_products',JSON.stringify(updatedList))
+            cartProduct()
+        }
+    </script>
+</body>
+
+</html>

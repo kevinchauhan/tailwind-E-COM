@@ -1,0 +1,173 @@
+[
+    {
+        "_id": "bluetooth-1",
+        "name": "Lenovo Sports Bluetooth",
+        "model": "DF8SDVX33",
+        "price": 1299,
+        "category": "bluetooth",
+        "description": "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
+        "addInfo": {
+            "launched": "2023,february",
+            "colors": "black,yellow,light gray"
+        },
+        "reviews": {
+            "count": 0
+        },
+        "images": {
+            "main": "images/products/bluetooth/bluetooth-4.webp",
+            "cart": "../images/products/bluetooth/bluetooth-4.webp"
+        }
+    },
+    {
+        "_id": "bluetooth-2",
+        "name": "Lenovo Wireless Bluetooth",
+        "model": "DG8SDVX32",
+        "price": 1599,
+        "category": "bluetooth",
+        "description": "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
+        "addInfo": {
+            "launched": "2023,february",
+            "colors": "black,conifer,silver"
+        },
+        "reviews": {
+            "count": 2
+        },
+        "images": {
+            "main": "images/products/bluetooth/bluetooth-1.webp",
+            "cart": "../images/products/bluetooth/bluetooth-1.webp"
+        }
+    },
+    {
+        "_id": "watch-1",
+        "name": "Sony smart Watch",
+        "model": "EG8SDVX74",
+        "price": 2999,
+        "category": "watch",
+        "description": "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
+        "addInfo": {
+            "launched": "2022,december",
+            "colors": "Black, Oyster Pink, Dawn Pink, Light Gray"
+        },
+        "reviews": {
+            "count": 2
+        },
+        "images": {
+            "main": "images/products/watch/watch-9.webp",
+            "cart": "../images/products/watch/watch-9.webp"
+        }
+    },
+    {
+        "_id": "watch-2",
+        "name": "Sony ladies smart Watch",
+        "model": "EF7SDVX73",
+        "price": 4999,
+        "category": "watch",
+        "description": "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
+        "addInfo": {
+            "launched": "2023,July",
+            "colors": "Grey Goose, Rose Gold, Gold, Black"
+        },
+        "reviews": {
+            "count": 5
+        },
+        "images": {
+            "main": "images/products/watch/watch-1.webp",
+            "cart": "../images/products/watch/watch-1.webp"
+        }
+    },
+    {
+        "_id": "watch-3",
+        "name": "Apple Watch Sport Band",
+        "model": "EF7SDVX72",
+        "price": 8999,
+        "category": "watch",
+        "description": "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
+        "addInfo": {
+            "launched": "2023,January",
+            "colors": "Light Gray, Black, Gray"
+        },
+        "reviews": {
+            "count": 1
+        },
+        "images": {
+            "main": "images/products/watch/watch-5.webp",
+            "cart": "../images/products/watch/watch-5.webp"
+        }
+    },
+    {
+        "_id": "headphone-1",
+        "name": "Gaming Headphone",
+        "model": "NVB7SDVX45",
+        "price": 1999,
+        "category": "headphones",
+        "description": "Jabra Evolve2 75 USB-A MS Teams Stereo Headset The Jabra Evolve2 75 USB-A MS Teams Stereo Headset has replaced previous hybrid working standards. Industry-leading call quality thanks to top-notch audio engineering. With this intelligent headset, you can stay connected and productive from the first call of the day to the last train home. With an ergonomic earcup design, this headset invented a brand-new dual-foam technology. You will be comfortable from the first call to the last thanks to the re-engineered leatherette ear cushion design that allows for better airflow. We can provide exceptional noise isolation and the best all-day comfort by mixing firm foam for the outer with soft foam for the interior of the ear cushions. So that you may receive Active Noise-Cancellation (ANC) performance that is even greater in a headset that you can wear for whatever length you wish. The headset also offers MS Teams Certifications and other features like Busylight, Calls controls, Voice guiding, and Wireless range (ft): Up to 100 feet. Best-in-class. Boom The most recent Jabra Evolve2 75 USB-A MS Teams Stereo Headset offers professional-grade call performance that leads the industry, yet Evolve2 75 wins best-in-class. Additionally, this includes a redesigned microphone boom arm that is 33 percent shorter than the Evolve 75 and offers the industry-leading call performance for which Jabra headsets are known. It complies with Microsoft's Open Office criteria and is specially tuned for outstanding conversations in open-plan workplaces and other loud environments when the microphone boom arm is lowered in Performance Mode.",
+        "addInfo": {
+            "launched": "2022,October",
+            "colors": "Cyan, Dark Grey, Orange"
+        },
+        "reviews": {
+            "count": 0
+        },
+        "images": {
+            "main": "images/products/headphone/headphone-5.webp",
+            "cart": "../images/products/headphone/headphone-5.webp"
+        }
+    },
+    {
+        "_id": "mobile-1",
+        "name": "iPhone 14 Pro",
+        "model": "AF7SDVX65",
+        "price": 59999,
+        "category": "mobile",
+        "description": "Jabra Evolve2 75 USB-A MS Teams Stereo Headset The Jabra Evolve2 75 USB-A MS Teams Stereo Headset has replaced previous hybrid working standards. Industry-leading call quality thanks to top-notch audio engineering. With this intelligent headset, you can stay connected and productive from the first call of the day to the last train home. With an ergonomic earcup design, this headset invented a brand-new dual-foam technology. You will be comfortable from the first call to the last thanks to the re-engineered leatherette ear cushion design that allows for better airflow. We can provide exceptional noise isolation and the best all-day comfort by mixing firm foam for the outer with soft foam for the interior of the ear cushions. So that you may receive Active Noise-Cancellation (ANC) performance that is even greater in a headset that you can wear for whatever length you wish. The headset also offers MS Teams Certifications and other features like Busylight, Calls controls, Voice guiding, and Wireless range (ft): Up to 100 feet. Best-in-class. Boom The most recent Jabra Evolve2 75 USB-A MS Teams Stereo Headset offers professional-grade call performance that leads the industry, yet Evolve2 75 wins best-in-class. Additionally, this includes a redesigned microphone boom arm that is 33 percent shorter than the Evolve 75 and offers the industry-leading call performance for which Jabra headsets are known. It complies with Microsoft's Open Office criteria and is specially tuned for outstanding conversations in open-plan workplaces and other loud environments when the microphone boom arm is lowered in Performance Mode.",
+        "addInfo": {
+            "launched": "2022,October",
+            "colors": "Lunar Green, Dark, Red Wine, Peach Schnapps"
+        },
+        "reviews": {
+            "count": 3
+        },
+        "images": {
+            "main": "images/products/mobile/mobile-5.webp",
+            "cart": "../images/products/mobile/mobile-5.webp"
+        }
+    },
+    {
+        "_id": "mobile-2",
+        "name": "Galaxy Android Tablet",
+        "model": "BD7SDVX62",
+        "price": 49999,
+        "category": "mobile",
+        "description": "Jabra Evolve2 75 USB-A MS Teams Stereo Headset The Jabra Evolve2 75 USB-A MS Teams Stereo Headset has replaced previous hybrid working standards. Industry-leading call quality thanks to top-notch audio engineering. With this intelligent headset, you can stay connected and productive from the first call of the day to the last train home. With an ergonomic earcup design, this headset invented a brand-new dual-foam technology. You will be comfortable from the first call to the last thanks to the re-engineered leatherette ear cushion design that allows for better airflow. We can provide exceptional noise isolation and the best all-day comfort by mixing firm foam for the outer with soft foam for the interior of the ear cushions. So that you may receive Active Noise-Cancellation (ANC) performance that is even greater in a headset that you can wear for whatever length you wish. The headset also offers MS Teams Certifications and other features like Busylight, Calls controls, Voice guiding, and Wireless range (ft): Up to 100 feet. Best-in-class. Boom The most recent Jabra Evolve2 75 USB-A MS Teams Stereo Headset offers professional-grade call performance that leads the industry, yet Evolve2 75 wins best-in-class. Additionally, this includes a redesigned microphone boom arm that is 33 percent shorter than the Evolve 75 and offers the industry-leading call performance for which Jabra headsets are known. It complies with Microsoft's Open Office criteria and is specially tuned for outstanding conversations in open-plan workplaces and other loud environments when the microphone boom arm is lowered in Performance Mode.",
+        "addInfo": {
+            "launched": "2022,september",
+            "colors": "Black, Gray, Silver, Cadet Grey"
+        },
+        "reviews": {
+            "count": 3
+        },
+        "images": {
+            "main": "images/products/mobile/mobile-1.webp",
+            "cart": "../images/products/mobile/mobile-1.webp"
+        }
+    },
+    {
+        "_id": "mobile-2",
+        "name": "Galaxy Android Tablet",
+        "model": "BD7SDVX62",
+        "price": 49999,
+        "category": "mobile",
+        "description": "Jabra Evolve2 75 USB-A MS Teams Stereo Headset The Jabra Evolve2 75 USB-A MS Teams Stereo Headset has replaced previous hybrid working standards. Industry-leading call quality thanks to top-notch audio engineering. With this intelligent headset, you can stay connected and productive from the first call of the day to the last train home. With an ergonomic earcup design, this headset invented a brand-new dual-foam technology. You will be comfortable from the first call to the last thanks to the re-engineered leatherette ear cushion design that allows for better airflow. We can provide exceptional noise isolation and the best all-day comfort by mixing firm foam for the outer with soft foam for the interior of the ear cushions. So that you may receive Active Noise-Cancellation (ANC) performance that is even greater in a headset that you can wear for whatever length you wish. The headset also offers MS Teams Certifications and other features like Busylight, Calls controls, Voice guiding, and Wireless range (ft): Up to 100 feet. Best-in-class. Boom The most recent Jabra Evolve2 75 USB-A MS Teams Stereo Headset offers professional-grade call performance that leads the industry, yet Evolve2 75 wins best-in-class. Additionally, this includes a redesigned microphone boom arm that is 33 percent shorter than the Evolve 75 and offers the industry-leading call performance for which Jabra headsets are known. It complies with Microsoft's Open Office criteria and is specially tuned for outstanding conversations in open-plan workplaces and other loud environments when the microphone boom arm is lowered in Performance Mode.",
+        "addInfo": {
+            "launched": "2022,september",
+            "colors": "Black, Gray, Silver, Cadet Grey"
+        },
+        "reviews": {
+            "count": 3
+        },
+        "images": {
+            "main": "images/products/mobile/mobile-1.webp",
+            "cart": "../images/products/mobile/mobile-1.webp"
+        }
+    }
+]

@@ -47,17 +47,17 @@
                     </div>
                 </div>
                 <div class="text-2xl text-gray-700">
-                    <span><i class="ri-arrow-up-down-line"></i></span>
-                    <span class="relative ms-2">
+                    <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
+                    <a href="#" class="  ms-2 hover:text-blue-100">
                         <i class="ri-heart-3-line"></i>
                         <span
                             class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
-                    </span>
-                    <span class="relative ms-2">
+                    </a>
+                    <a href="./pages/cart.html" class="relative ms-2 hover:text-blue-100">
                         <i class="ri-shopping-bag-line"></i>
                         <span
-                            class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
-                    </span>
+                            class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white" id="cart-count">0</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -224,8 +224,8 @@
 
     <!-- trending products start -->
     <section class="pb-36">
-        <div class="container mx-auto">
-            <div class="heading flex flex-wrap items-center">
+        <div class="container mx-auto px-0">
+            <div class="heading flex flex-wrap items-center px-3">
                 <div class="w-full md:w-1/2">
                     <h2 class="font-bold text-4xl text-blue-400">Trending Products</h2>
                 </div>
@@ -238,22 +238,30 @@
                 </div>
             </div>
             <div class="product-list mt-10">
-                <div class="flex flex-wrap">
-                    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3">
+                <div class="flex flex-wrap" id="trending-product-list">
+                    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
                         <div class="product-card border rounded-lg hover:shadow-lg duration-300 ease-in-out">
                             <div class="border-b relative">
-                                <img src="images/products/blutooth-1.webp" alt="">
+                                <img src="images/products/bluetooth/bluetooth-1.webp" alt="">
                                 <div class="card-widget">
-                                    <ul class="bg-white rounded-lg">
-                                        <li class="border rounded-t-lg text-xl px-2 py-1"><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-                                        <li class="border text-xl px-2 py-1"><a href="#"><i class="ri-eye-line"></i></a></li>
-                                        <li class="border rounded-b-lg text-xl px-2 py-1"><a href="#"><i class="ri-heart-3-line"></i></a></li>
+                                    <ul class="bg-white rounded-lg border">
+                                        <li
+                                            class="hover:bg-blue-100 hover:text-white border-b rounded-t-lg text-xl px-2 py-1">
+                                            <a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                        <li class="hover:bg-blue-100 hover:text-white border-b text-xl px-2 py-1"><a
+                                                href="#"><i class="ri-eye-line"></i></a>
+                                        </li>
+                                        <li class="hover:bg-blue-100 hover:text-white rounded-b-lg text-xl px-2 py-1"><a
+                                                href="#"><i class="ri-heart-3-line"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="py-5 px-8">
-                                <h6 class="text-xs font-medium text-gray-700"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Bluetooth</a></h6>
-                                <h4 class="font-medium"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Lenovo Sports Bluetooth</a></h4>
+                                <h6 class="text-xs font-medium text-gray-700"><a
+                                        class="hover:text-blue-100 duration-300 ease-in capitalize"
+                                        href="#">Bluetooth</a></h6>
+                                <h4 class="font-medium"><a class="hover:text-blue-100 duration-300 ease-in capitalize"
+                                        href="#">Lenovo smart Watch</a></h4>
                                 <p class="text-slate-300">
                                     <i class="ri-star-s-fill"></i>
                                     <i class="ri-star-s-fill"></i>
@@ -262,96 +270,87 @@
                                     <i class="ri-star-s-fill"></i>
                                     <small class="text-gray-600">(0 Review)</small>
                                 </p>
-                                <h4 class="text-blue-100 font-medium">₹ 1599</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3">
-                        <div class="product-card border rounded-lg hover:shadow-lg duration-300 ease-in-out">
-                            <div class="border-b relative">
-                                <img src="images/products/blutooth-1.webp" alt="">
-                                <div class="card-widget">
-                                    <ul class="bg-white rounded-lg">
-                                        <li class="border rounded-t-lg text-xl px-2 py-1"><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-                                        <li class="border text-xl px-2 py-1"><a href="#"><i class="ri-eye-line"></i></a></li>
-                                        <li class="border rounded-b-lg text-xl px-2 py-1"><a href="#"><i class="ri-heart-3-line"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="py-5 px-8">
-                                <h6 class="text-xs font-medium text-gray-700"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Bluetooth</a></h6>
-                                <h4 class="font-medium"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Lenovo Sports Bluetooth</a></h4>
-                                <p class="text-slate-300">
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <small class="text-gray-600">(0 Review)</small>
-                                </p>
-                                <h4 class="text-blue-100 font-medium">₹ 1599</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3">
-                        <div class="product-card border rounded-lg hover:shadow-lg duration-300 ease-in-out">
-                            <div class="border-b relative">
-                                <img src="images/products/blutooth-1.webp" alt="">
-                                <div class="card-widget">
-                                    <ul class="bg-white rounded-lg">
-                                        <li class="border rounded-t-lg text-xl px-2 py-1"><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-                                        <li class="border text-xl px-2 py-1"><a href="#"><i class="ri-eye-line"></i></a></li>
-                                        <li class="border rounded-b-lg text-xl px-2 py-1"><a href="#"><i class="ri-heart-3-line"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="py-5 px-8">
-                                <h6 class="text-xs font-medium text-gray-700"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Bluetooth</a></h6>
-                                <h4 class="font-medium"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Lenovo Sports Bluetooth</a></h4>
-                                <p class="text-slate-300">
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <small class="text-gray-600">(0 Review)</small>
-                                </p>
-                                <h4 class="text-blue-100 font-medium">₹ 1599</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3">
-                        <div class="product-card border rounded-lg hover:shadow-lg duration-300 ease-in-out">
-                            <div class="border-b relative">
-                                <img src="images/products/blutooth-1.webp" alt="">
-                                <div class="card-widget">
-                                    <ul class="bg-white rounded-lg">
-                                        <li class="border rounded-t-lg text-xl px-2 py-1"><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-                                        <li class="border text-xl px-2 py-1"><a href="#"><i class="ri-eye-line"></i></a></li>
-                                        <li class="border rounded-b-lg text-xl px-2 py-1"><a href="#"><i class="ri-heart-3-line"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="py-5 px-8">
-                                <h6 class="text-xs font-medium text-gray-700"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Bluetooth</a></h6>
-                                <h4 class="font-medium"><a class="hover:text-blue-100 duration-300 ease-in" href="#">Lenovo Sports Bluetooth</a></h4>
-                                <p class="text-slate-300">
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <i class="ri-star-s-fill"></i>
-                                    <small class="text-gray-600">(0 Review)</small>
-                                </p>
-                                <h4 class="text-blue-100 font-medium">₹ 1599</h4>
+                                <h4 class="text-blue-100 font-medium">₹ 1299</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- sub-banner start -->
+            <div class="flex flex-wrap mt-20">
+                <div class="w-full lg:w-2/3 px-3">
+                    <div
+                        class="bg-[url('/images/sub-banner/product-banner-1.jpg')] bg-no-repeat bg-cover lg:bg-auto bg-right p-14 rounded-lg">
+                        <h5 class="text-sm text-gray-700 font-medium">Sale 20% off all store</h5>
+                        <h3 class="mb-5 mt-3"><a
+                                class="text-2xl font-medium hover:text-blue-100 duration-300 ease-in-out"
+                                href="#">Smartphone <br> BLU G91 Pro 2022</a></h3>
+                        <a href="#" class="text-xs font-medium hover:text-blue-100 duration-300 ease-in-out">Shop Now <i
+                                class="ri-arrow-right-line text-xl align-middle"></i></a>
+                    </div>
+                </div>
+                <div class="w-full mt-3 lg:w-auto lg:mt-0 lg:flex-grow px-3">
+                    <div
+                        class="bg-[url('/images/sub-banner/product-banner-2.jpg')] bg-no-repeat bg-cover lg:bg-auto bg-right p-10 rounded-lg h-full">
+                        <h3 class="mb-1 mt-5"><a
+                                class="text-2xl font-medium hover:text-blue-100 duration-300 ease-in-out"
+                                href="#">HyperX Cloud II <br> Wireless</a></h3>
+                        <h5 class="text-sm text-gray-700 font-medium mb-5">Sale 20% off all store</h5>
+                        <a href="#" class="text-xs font-medium hover:text-blue-100 duration-300 ease-in-out">Shop Now <i
+                                class="ri-arrow-right-line text-xl align-middle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- sub-banner end -->
         </div>
     </section>
     <!-- trending products end -->
+
+    <!-- footer start -->
+    <footer class="bg-slate-100 py-36">
+        <div class="top-footer">
+            <div class="container mx-auto">
+                <div class="flex fex-wrap">
+                    <div class="w-2/6 px-3">
+                        <img src="images/logo.svg" alt="">
+                        <p class="text-lg my-4">We are a team of designers and developers that create high quality
+                            WordPress</p>
+                        <ul class="flex gap-3">
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-facebook-fill"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-twitter-fill"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-instagram-fill"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-linkedin-fill"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/6 px-3">
+                        <h3 class="text-xl font-medium">My Account</h3>
+                    </div>
+                    <div class="w-1/4 px-3">
+                        <h3 class="text-xl font-medium">Information</h3>
+                    </div>
+                    <div class="w-1/4 px-3">
+                        <h3 class="text-xl font-medium">Talk To Us</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script type="module" src="js/main.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script>
+        
+    </script>
 </body>
 
 </html>

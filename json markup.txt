@@ -1,0 +1,15 @@
+{
+	"_id": 1,
+    "name": "Lenovo Wireless Bluetooth",
+    "model": "DG8SDVX32",
+    "price": 1299,
+    "category": "Bluetooth",
+    "description": "Starlight Aluminum Case with Braided Solo Loop The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Braided Solo Loop is made from recycled yarn and silicone threads for an ultracomfortable, stretchable design with no clasps or buckles.",
+    "addInfo": {
+        "launched": "2023,february",
+        "colors": "black,conifer,silver"
+    },
+    "reviews": {
+        "count": 2
+    }
+}
