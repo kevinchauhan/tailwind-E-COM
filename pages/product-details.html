@@ -18,6 +18,85 @@
 </head>
 
 <body>
+    <!-- header start -->
+    <div class="sticky top-0 z-10"
+        <header class="bg-white border-b">
+            <div class="container mx-auto py-4 flex justify-between items-center">
+                <div class="logo"><a href="/"><img src="../images/logo.svg" alt=""></a></div>
+                <div>
+                    <div class="search-box border-2 border-blue-100 lg:block hidden">
+                        <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
+                            placeholder="Search for Products...">
+                        <select name="" id=""
+                            class="border-s border-gray-300 px-3 cursor-pointer focus-within:outline-none">
+                            <option value="">Select Category</option>
+                            <option value="">Electronics</option>
+                            <option value="">Fashion</option>
+                            <option value="">Beauty</option>
+                        </select>
+                        <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
+                                class="ri-search-line"></i></button>
+                    </div>
+                </div>
+                <div class="icon flex items-center">
+                    <div class="flex items-center me-12">
+                        <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
+                                class="ri-user-line text-gray-500"></i></span>
+                        <div>
+                            <small class="text-gray-400 font-semibold">Hello,</small>
+                            <div class="text-sm text-gray-500 font-semibold">Sign In</div>
+                        </div>
+                    </div>
+                    <div class="text-2xl text-gray-700">
+                        <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
+                        <a href="#" class="relative  ms-2 hover:text-blue-100">
+                            <i class="ri-heart-3-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
+                        </a>
+                        <a href="cart.html" class="relative ms-2 hover:text-blue-100">
+                            <i class="ri-shopping-bag-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white"
+                                id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="bg-white shadow-md">
+            <div class="container max-w-screen-xl mx-auto">
+                <div class="flex items-center text-sm justify-between">
+                    <div class="w-1/2 md:w-1/4">
+                        <div
+                            class="bg-blue-100 text-white py-3 px-5 me-7 cursor-pointer hover:bg-blue-300 transition duration-500 ease">
+                            <i class="ri-menu-2-line text-xl align-middle"></i> All Departments <i
+                                class="ri-arrow-down-s-line float-right text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5 lg:block hidden">
+                        <ul class="flex items-center gap-4">
+                            <li><a class="py-3" href="/">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Shop <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-phone-line text-2xl me-2 text-blue-100 align-middle"></i>
+                        <div>
+                            <small class="text-gray-500 font-semibold">Hotline:</small>
+                            <div class="text-gray-600 font-bold"> +(123)-456-7891</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+
     <!-- product photo and details start -->
     <div class="container mx-auto mt-10 py-24">
         <div class="flex flex-wrap">

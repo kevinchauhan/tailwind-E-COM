@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.png">
+    <!-- remix-icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" />
+    <!-- google-font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind-css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- main-css -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="sticky top-0 z-10">
+        <header class="bg-white border-b shadow-md">
+            <div class="container mx-auto py-4 flex justify-between items-center">
+                <div class="logo"><a href="/"><img src="../images/logo.svg" alt=""></a></div>
+                <div class="icon flex items-center">
+                    <div class="flex items-center me-12">
+                        <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
+                                class="ri-user-line text-gray-500"></i></span>
+                        <div>
+                            <small class="text-gray-400 font-semibold">Hello,</small>
+                            <div class="text-sm text-gray-500 font-semibold"><a href="/">Sign In</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- header end -->
+
+    <div class="w-2/5 mx-auto shadow-md p-12 mt-12">
+        <h1 class="text-4xl font-medium text-center">Sign Up</h1>
+        <div class="mt-12">
+            <form action="" name="signup" class="text-sm">
+                <div class="relative text-sm border focus-within:outline-1 focus-within:outline">
+                    <label for="name" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your Name</label>
+                    <input class="p-5 w-full focus-within:outline-none text-blue-400" type="name" name="name"
+                        placeholder="abc xyz">
+                </div>
+                <p class="error-msg text-red-500"></p>
+                <div class="relative text-sm border focus-within:outline-1 focus-within:outline mt-10">
+                    <label for="email" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your Email</label>
+                    <input class="p-5 w-full focus-within:outline-none text-blue-400" type="email" name="email"
+                        placeholder="abc@gmail.com">
+                </div>
+                <p id="email-check" class="error-msg text-red-500"></p>
+                <div class="relative text-sm border focus-within:outline-1 focus-within:outline mt-10">
+                    <label for="password" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your
+                        password</label>
+                    <input class="p-5 w-full focus-within:outline-none text-blue-400" type="password" name="password"
+                        placeholder="min. 6 character">
+                </div>
+                <p class="error-msg text-red-500"></p>
+                <h6 class="text-sm text-gray-600 mb-5 mt-2">Already have an account? <a href="../index.html"
+                        class="text-blue-100 hover:border-b border-blue-100">Sign In</a></h6>
+                <button class="bg-blue-400 text-white w-full py-3 hover:bg-blue-100 duration-200 ease-in">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const signupForm = document.signup
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const userName = signupForm.name
+            const userEmail = signupForm.email
+            const userPassword = signupForm.password
+            const errorMsg = document.querySelectorAll('.error-msg')
+
+            // validating form inputs
+            let nameError = true
+            let emailError = true
+            let passError = true
+
+            if (userName.value === '') {
+                errorMsg[0].innerHTML = 'please enter name'
+                nameError = true
+            } else {
+                errorMsg[0].innerHTML = ''
+                nameError = false
+            }
+
+            if (userEmail.value === '') {
+                errorMsg[1].innerHTML = 'please enter valid email'
+                emailError = true
+            } else {
+                errorMsg[1].innerHTML = ''
+                emailError = false
+            }
+
+            if (userPassword.value === '') {
+                errorMsg[2].innerHTML = 'please enter password'
+                passError = true
+            } else {
+                errorMsg[2].innerHTML = ''
+                passError = false
+            }
+
+            if (!nameError && !emailError && !passError) {
+                const date = new Date()
+                const userMarkup = {
+                    personalData: {
+                        id: date.getTime(),
+                        name: userName.value,
+                        email: userEmail.value,
+                        password: userPassword.value
+                    }
+                }
+
+                registerUser(userMarkup) // register function called...
+            }
+
+        })
+
+        //  Registering new user
+        function registerUser(userMarkup) {
+            const localUserData = JSON.parse(localStorage.getItem('users_data'))
+            if (localUserData) {
+                const checkEmail = localUserData.some(e => {
+                    if (e.personalData.email === userMarkup.personalData.email) {
+                        return true
+                    }
+                })
+                if (checkEmail) {
+                    document.querySelector('#email-check').innerHTML = 'Email already exists'
+                } else {
+                    localUserData.push(userMarkup)
+                    console.log(localUserData)
+                    localStorage.setItem('users_data', JSON.stringify(localUserData))
+                    location.href = './registered.html'
+                }
+            } else {
+                localStorage.setItem('users_data', JSON.stringify([userMarkup]))
+                location.href = './registered.html'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

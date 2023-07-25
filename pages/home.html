@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.png">
+    <!-- remix-icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" />
+    <!-- google-font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind-css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- main-css -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body class="font-roboto" onload="loadtrend()">
+    <!-- header start -->
+    <div class="sticky top-0 z-10">
+        <header class="bg-white border-b">
+            <div class="container mx-auto py-4 flex justify-between items-center">
+                <div class="logo"><a href="./home.html"><img src="../images/logo.svg" alt=""></a></div>
+                <div>
+                    <div class="search-box border-2 border-blue-100 lg:block hidden">
+                        <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
+                            placeholder="Search for Products...">
+                        <select name="" id=""
+                            class="border-s border-gray-300 px-3 cursor-pointer focus-within:outline-none">
+                            <option value="">Select Category</option>
+                            <option value="">Electronics</option>
+                            <option value="">Fashion</option>
+                            <option value="">Beauty</option>
+                        </select>
+                        <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
+                                class="ri-search-line"></i></button>
+                    </div>
+                </div>
+                <div class="icon flex items-center">
+                    <div class="flex items-center me-12">
+                        <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
+                                class="ri-user-line text-gray-500"></i></span>
+                        <div>
+                            <small class="text-gray-400 font-semibold">Hello,</small>
+                            <div class="drop-down text-sm text-gray-500 font-semibold relative">
+                                <button id="user-name">Sign In</button>
+                                <div class="drop-down-menu absolute invisible top-6 -left-2 border bg-white">
+                                    <ul>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5" href="cart.html">Cart</a></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5" onclick="logout()">Logout</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-2xl text-gray-700">
+                        <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
+                        <a href="#" class="relative  ms-2 hover:text-blue-100">
+                            <i class="ri-heart-3-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
+                        </a>
+                        <a href="cart.html" class="relative ms-2 hover:text-blue-100">
+                            <i class="ri-shopping-bag-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white"
+                                id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="bg-white shadow-md">
+            <div class="container max-w-screen-xl mx-auto">
+                <div class="flex items-center text-sm justify-between">
+                    <div class="w-1/2 md:w-1/4">
+                        <div
+                            class="bg-blue-100 text-white py-3 px-5 me-7 cursor-pointer hover:bg-blue-300 transition duration-500 ease">
+                            <i class="ri-menu-2-line text-xl align-middle"></i> All Departments <i
+                                class="ri-arrow-down-s-line float-right text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5 lg:block hidden">
+                        <ul class="flex items-center gap-4">
+                            <li><a class="py-3" href="./home.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Shop <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-phone-line text-2xl me-2 text-blue-100 align-middle"></i>
+                        <div>
+                            <small class="text-gray-500 font-semibold">Hotline:</small>
+                            <div class="text-gray-600 font-bold"> +(123)-456-7891</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+
+    <!-- hero start -->
+    <section>
+        <div class="hero relative z-0 bg-blue-200 py-20">
+            <img class="absolute top-0 right-0 -z-10 saturate-0 opacity-20" src="../images/slider/slider-shape-1.webp"
+                alt="">
+            <div class="container mx-auto">
+                <div class="flex items-center">
+                    <div class="md:w-1/2 w-full text-white">
+                        <span>Starting at <span>$599</span></span>
+                        <h1 class="text-6xl font-bold my-1">The best tablet Collection 2023</h1>
+                        <span class="font-oregano text-3xl">Exclusive offer <span class="text-yellow-200 relative">-35%
+                                <svg class="absolute right-0 top-full" width="94" height="20" viewBox="0 0 94 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M74.8576 4.63367L78.6048 5.11367C80.9097 5.35155 82.8309 5.75148 84.4483 5.97993L86.6581 6.31091L88.4262 6.63948C89.4684 6.81761 90.2699 6.9312 90.8805 6.99186C93.3213 7.24888 92.7011 6.63674 92.8183 6.12534C92.9355 5.61394 93.7175 5.37081 91.3267 4.45886C90.73 4.24001 89.9345 3.97481 88.8826 3.65818L87.1034 3.12577L84.8643 2.63282C83.236 2.28025 81.2402 1.82307 78.8684 1.52138L75.0177 0.981633C73.6188 0.823014 72.1417 0.730003 70.5389 0.582533C63.0297 0.0282543 55.4847 0.193022 48.0068 1.07459C39.9065 2.04304 31.9328 3.87384 24.2213 6.53586C18.0824 8.61764 12.1674 11.3089 6.56479 14.5692C4.88189 15.5255 3.25403 16.5756 1.68892 17.7145C0.568976 18.5077 -0.00964231 18.9932 0.0547097 19.0858C0.388606 19.6584 10.6194 13.1924 25.151 8.99361C32.789 6.72748 40.6283 5.20536 48.5593 4.44848C55.8569 3.76455 63.1992 3.69678 70.5082 4.24591L74.8223 4.62335"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </span> off this week</span>
+                    </div>
+                    <div class="w-1/2 relative z-0 md:block hidden">
+                        <img class="ms-auto" src="../images/slider/slider-img-1.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- products category start -->
+    <section>
+        <div class="container py-20 mx-auto">
+            <div class="flex flex-wrap items-center mb-10">
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 text-center">
+                    <a href="#" class="category flex justify-center items-center mx-auto mb-3">
+                        <div>
+                            <img src="../images/category/product-cat-1.webp" alt="this is an image">
+                        </div>
+                    </a>
+                    <h3><a class="hover:text-blue-100 text-xl font-medium" href="#">Mobile Tablets</a></h3>
+                    <p class="text-sm text-gray-500">3 Product</p>
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 text-center">
+                    <a href="#" class="category flex justify-center items-center mx-auto mb-3">
+                        <div>
+                            <img src="../images/category/product-cat-1.webp" alt="this is an image">
+                        </div>
+                    </a>
+                    <h3><a class="hover:text-blue-100 text-xl font-medium" href="#">Mobile Tablets</a></h3>
+                    <p class="text-sm text-gray-500">3 Product</p>
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 text-center">
+                    <a href="#" class="category flex justify-center items-center mx-auto mb-3">
+                        <div>
+                            <img src="../images/category/product-cat-1.webp" alt="this is an image">
+                        </div>
+                    </a>
+                    <h3><a class="hover:text-blue-100 text-xl font-medium" href="#">Mobile Tablets</a></h3>
+                    <p class="text-sm text-gray-500">3 Product</p>
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 text-center">
+                    <a href="#" class="category flex justify-center items-center mx-auto mb-3">
+                        <div>
+                            <img src="../images/category/product-cat-1.webp" alt="this is an image">
+                        </div>
+                    </a>
+                    <h3><a class="hover:text-blue-100 text-xl font-medium" href="#">Mobile Tablets</a></h3>
+                    <p class="text-sm text-gray-500">3 Product</p>
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 text-center">
+                    <a href="#" class="category flex justify-center items-center mx-auto mb-3">
+                        <div>
+                            <img src="../images/category/product-cat-1.webp" alt="this is an image">
+                        </div>
+                    </a>
+                    <h3><a class="hover:text-blue-100 text-xl font-medium" href="#">Mobile Tablets</a></h3>
+                    <p class="text-sm text-gray-500">3 Product</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center mt-10">
+                <div class="w-1/2 mb-2 md:w-1/3 lg:w-1/4 flex items-center px-1">
+                    <div class="bg-slate-100 w-full flex items-center py-6 px-3">
+                        <div class="cat-icon -scale-x-100 me-3">
+                            <i class="ri-truck-line text-5xl text-pink-100"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Free Delivery</h4>
+                            <p class="text-sm text-gray-500">Orders from all item</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 mb-2 md:w-1/3 lg:w-1/4 flex items-center px-1">
+                    <div class="bg-slate-100 w-full flex items-center py-6 px-3">
+                        <div class="cat-icon -scale-x-100 me-3">
+                            <i class="ri-truck-line text-5xl text-pink-100"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Free Delivery</h4>
+                            <p class="text-sm text-gray-500">Orders from all item</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 mb-2 md:w-1/3 lg:w-1/4 flex items-center px-1">
+                    <div class="bg-slate-100 w-full flex items-center py-6 px-3">
+                        <div class="cat-icon -scale-x-100 me-3">
+                            <i class="ri-truck-line text-5xl text-pink-100"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Free Delivery</h4>
+                            <p class="text-sm text-gray-500">Orders from all item</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 mb-2 md:w-1/3 lg:w-1/4 flex items-center px-1">
+                    <div class="bg-slate-100 w-full flex items-center py-6 px-3">
+                        <div class="cat-icon -scale-x-100 me-3">
+                            <i class="ri-truck-line text-5xl text-pink-100"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Free Delivery</h4>
+                            <p class="text-sm text-gray-500">Orders from all item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- products category end -->
+
+    <!-- trending products start -->
+    <section class="pb-36">
+        <div class="container mx-auto px-0">
+            <div class="heading flex flex-wrap items-center px-3">
+                <div class="w-full md:w-1/2">
+                    <h2 class="font-bold text-4xl text-blue-400">Trending Products</h2>
+                </div>
+                <div class="w-full mt-3 md:w-1/2 flex md:justify-end">
+                    <ul class="trending-head-tabs flex gap-8 text-xl relative">
+                        <li><a href="#" class="text-gray-500 active">New</a></li>
+                        <li><a href="#" class="text-gray-500">Feature</a></li>
+                        <li><a href="#" class="text-gray-500">TopSellers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-list mt-10">
+                <div class="flex flex-wrap" id="trending-product-list">
+                    <!-- <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+                        <div class="product-card border rounded-lg hover:shadow-lg duration-300 ease-in-out">
+                            <div class="border-b relative">
+                                <img src="../images/products/bluetooth/bluetooth-1.webp" alt="">
+                                <div class="card-widget">
+                                    <ul class="bg-white rounded-lg border">
+                                        <li
+                                            class="hover:bg-blue-100 hover:text-white border-b rounded-t-lg text-xl px-2 py-1">
+                                            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                                        </li>
+                                        <li class="hover:bg-blue-100 hover:text-white border-b text-xl px-2 py-1"><a
+                                                href="#"><i class="ri-eye-line"></i></a>
+                                        </li>
+                                        <li class="hover:bg-blue-100 hover:text-white rounded-b-lg text-xl px-2 py-1"><a
+                                                href="#"><i class="ri-heart-3-line"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="py-5 px-8">
+                                <h6 class="text-xs font-medium text-gray-700"><a
+                                        class="hover:text-blue-100 duration-300 ease-in capitalize"
+                                        href="#">Bluetooth</a></h6>
+                                <h4 class="font-medium"><a class="hover:text-blue-100 duration-300 ease-in capitalize"
+                                        href="#">Lenovo smart Watch</a></h4>
+                                <p class="text-slate-300">
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <small class="text-gray-600">(0 Review)</small>
+                                </p>
+                                <h4 class="text-blue-100 font-medium">₹ 1299</h4>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- sub-banner start -->
+            <div class="flex flex-wrap mt-20">
+                <div class="w-full lg:w-2/3 px-3">
+                    <div
+                        class="bg-[url('../images/sub-banner/product-banner-1.jpg')] bg-no-repeat bg-cover lg:bg-auto bg-right p-14 rounded-lg">
+                        <h5 class="text-sm text-gray-700 font-medium">Sale 20% off all store</h5>
+                        <h3 class="mb-5 mt-3"><a
+                                class="text-2xl font-medium hover:text-blue-100 duration-300 ease-in-out"
+                                href="#">Smartphone <br> BLU G91 Pro 2022</a></h3>
+                        <a href="#" class="text-xs font-medium hover:text-blue-100 duration-300 ease-in-out">Shop Now <i
+                                class="ri-arrow-right-line text-xl align-middle"></i></a>
+                    </div>
+                </div>
+                <div class="w-full mt-3 lg:w-auto lg:mt-0 lg:flex-grow px-3">
+                    <div
+                        class="bg-[url('../images/sub-banner/product-banner-2.jpg')] bg-no-repeat bg-cover lg:bg-auto bg-right p-10 rounded-lg h-full">
+                        <h3 class="mb-1 mt-5"><a
+                                class="text-2xl font-medium hover:text-blue-100 duration-300 ease-in-out"
+                                href="#">HyperX Cloud II <br> Wireless</a></h3>
+                        <h5 class="text-sm text-gray-700 font-medium mb-5">Sale 20% off all store</h5>
+                        <a href="#" class="text-xs font-medium hover:text-blue-100 duration-300 ease-in-out">Shop Now <i
+                                class="ri-arrow-right-line text-xl align-middle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- sub-banner end -->
+        </div>
+    </section>
+    <!-- trending products end -->
+
+    <!-- footer start -->
+    <footer class="bg-slate-100 py-36">
+        <div class="top-footer">
+            <div class="container mx-auto">
+                <div class="flex fex-wrap">
+                    <div class="w-2/6 px-3">
+                        <img src="../images/logo.svg" alt="">
+                        <p class="text-lg my-4">We are a team of designers and developers that create high quality
+                            WordPress</p>
+                        <ul class="flex gap-3">
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-facebook-fill"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-twitter-fill"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-instagram-fill"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:bg-blue-100 hover:text-white duration-300 ease-in-out text-gray-700 bg-white w-8 h-8 block text-center leading-8 drop-shadow-md rounded-md text-md"><i
+                                        class="ri-linkedin-fill"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/6 px-3">
+                        <h3 class="text-xl font-medium">My Account</h3>
+                    </div>
+                    <div class="w-1/4 px-3">
+                        <h3 class="text-xl font-medium">Information</h3>
+                    </div>
+                    <div class="w-1/4 px-3">
+                        <h3 class="text-xl font-medium">Talk To Us</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script type="module" src="../js/main.js"></script>
+    <!-- authenticate -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+
+</html>

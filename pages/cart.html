@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products Details</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.png">
     <!-- remix-icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" />
     <!-- google-font -->
@@ -16,94 +18,93 @@
     <!-- main-css -->
     <link rel="stylesheet" href="../css/main.css">
 </head>
-<!-- component -->
-<!-- Create By Joker Banny -->
-<style>
-    @layer utilities {
 
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-    }
-</style>
-
-<body>
+<body onload="">
     <!-- header start -->
-    <header class="border-b">
-        <div class="container mx-auto py-4 flex justify-between items-center">
-            <div class="logo"><img src="../images/logo.svg" alt=""></div>
-            <div>
-                <div class="search-box border-2 border-blue-100 lg:block hidden">
-                    <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
-                        placeholder="Search for Products...">
-                    <select name="" id=""
-                        class="border-s border-gray-300 px-3 cursor-pointer focus-within:outline-none">
-                        <option value="">Select Category</option>
-                        <option value="">Electronics</option>
-                        <option value="">Fashion</option>
-                        <option value="">Beauty</option>
-                    </select>
-                    <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
-                            class="ri-search-line"></i></button>
-                </div>
-            </div>
-            <div class="icon flex items-center">
-                <div class="flex items-center me-12">
-                    <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
-                            class="ri-user-line text-gray-500"></i></span>
-                    <div>
-                        <small class="text-gray-400 font-semibold">Hello,</small>
-                        <div class="text-sm text-gray-500 font-semibold">Sign In</div>
+    <div class="sticky top-0 z-10">
+        <header class="bg-white border-b">
+            <div class="container mx-auto py-4 flex justify-between items-center">
+                <div class="logo"><a href="./home.html"><img src="../images/logo.svg" alt=""></a></div>
+                <div>
+                    <div class="search-box border-2 border-blue-100 lg:block hidden">
+                        <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
+                            placeholder="Search for Products...">
+                        <select name="" id=""
+                            class="border-s border-gray-300 px-3 cursor-pointer focus-within:outline-none">
+                            <option value="">Select Category</option>
+                            <option value="">Electronics</option>
+                            <option value="">Fashion</option>
+                            <option value="">Beauty</option>
+                        </select>
+                        <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
+                                class="ri-search-line"></i></button>
                     </div>
                 </div>
-                <div class="text-2xl text-gray-700">
-                    <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
-                    <a href="#" class="  ms-2 hover:text-blue-100">
-                        <i class="ri-heart-3-line"></i>
-                        <span
-                            class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
-                    </a>
-                    <a href="./pages/cart.html" class="relative ms-2 hover:text-blue-100">
-                        <i class="ri-shopping-bag-line"></i>
-                        <span
-                            class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white" id="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav class="sticky top-0 z-10 bg-white">
-        <div class="container max-w-screen-xl mx-auto">
-            <div class="flex items-center text-sm justify-between">
-                <div class="w-1/2 md:w-1/4">
-                    <div
-                        class="bg-blue-100 text-white py-3 px-5 me-7 cursor-pointer hover:bg-blue-300 transition duration-500 ease">
-                        <i class="ri-menu-2-line text-xl align-middle"></i> All Departments <i
-                            class="ri-arrow-down-s-line float-right text-xl"></i>
+                <div class="icon flex items-center">
+                    <div class="flex items-center me-12">
+                        <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
+                                class="ri-user-line text-gray-500"></i></span>
+                        <div>
+                            <small class="text-gray-400 font-semibold">Hello,</small>
+                            <div class="drop-down text-sm text-gray-500 font-semibold relative">
+                                <button id="user-name">Sign In</button>
+                                <div class="drop-down-menu absolute invisible top-6 -left-2 border bg-white">
+                                    <ul>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5" href="cart.html">Cart</a></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5" onclick="logout()">Logout</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="lg:w-3/5 lg:block hidden">
-                    <ul class="flex items-center gap-4">
-                        <li><a class="py-3" href="../index.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a class="py-3" href="#">Products <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a class="py-3" href="#">Shop <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a class="py-3" href="#">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a class="py-3" href="#">Blog <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a class="py-3" href="#">Contact <i class="ri-arrow-down-s-line"></i></a></li>
-                    </ul>
-                </div>
-                <div class="flex items-center">
-                    <i class="ri-phone-line text-2xl me-2 text-blue-100 align-middle"></i>
-                    <div>
-                        <small class="text-gray-500 font-semibold">Hotline:</small>
-                        <div class="text-gray-600 font-bold"> +(123)-456-7891</div>
+                    <div class="text-2xl text-gray-700">
+                        <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
+                        <a href="#" class="relative  ms-2 hover:text-blue-100">
+                            <i class="ri-heart-3-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
+                        </a>
+                        <a href="cart.html" class="relative ms-2 hover:text-blue-100">
+                            <i class="ri-shopping-bag-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white"
+                                id="cart-count">0</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </header>
+        <nav class="bg-white shadow-md">
+            <div class="container max-w-screen-xl mx-auto">
+                <div class="flex items-center text-sm justify-between">
+                    <div class="w-1/2 md:w-1/4">
+                        <div
+                            class="bg-blue-100 text-white py-3 px-5 me-7 cursor-pointer hover:bg-blue-300 transition duration-500 ease">
+                            <i class="ri-menu-2-line text-xl align-middle"></i> All Departments <i
+                                class="ri-arrow-down-s-line float-right text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5 lg:block hidden">
+                        <ul class="flex items-center gap-4">
+                            <li><a class="py-3" href="./home.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Shop <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-phone-line text-2xl me-2 text-blue-100 align-middle"></i>
+                        <div>
+                            <small class="text-gray-500 font-semibold">Hotline:</small>
+                            <div class="text-gray-600 font-bold"> +(123)-456-7891</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
     <!-- header end -->
 
     <div class="container mx-auto mt-10">
@@ -120,7 +121,7 @@
 
                 <!-- product info start -->
                 <div id="cart-product-list">
-                    <div class="flex items-center hover:bg-gray-100 px-6 py-5">
+                    <!-- <div class="flex items-center hover:bg-gray-100 px-6 py-5">
                         <div class="flex w-2/5 items-center">
                             <div class="w-20">
                                 <img class="h-24" src="../images/products/bluetooth/bluetooth-1.webp" alt="">
@@ -147,17 +148,17 @@
                         </div>
                         <span id="cart-item-price" class="text-center w-1/5 font-semibold text-sm">1299</span>
                         <span id="cart-item-total" class="text-center w-1/5 font-semibold text-sm">1299</span>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- product info end -->
 
-                <a href="#" class="flex font-semibold text-blue-100 text-sm mt-10">
+                <button onclick="history.back()" class="flex font-semibold text-blue-100 text-sm mt-10">
                     <svg class="fill-current mr-2 text-blue-100 w-4" viewBox="0 0 448 512">
                         <path
                             d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
                     </svg>
                     Continue Shopping
-                </a>
+                </button>
             </div>
 
             <div id="summary" class="w-full mt-5 lg:mt-0 lg:w-1/4 py-6">
@@ -194,70 +195,10 @@
 
 
 
-    <script>
-        window.addEventListener('load', cartProduct)
-        function cartProduct() {
-            const wrapper = document.querySelector('#cart-product-list')
-            const totalItems = document.querySelector('#total-items')
-            const totalAmt = document.querySelector('#total-amt')
-            const cartProductsData = JSON.parse(localStorage.getItem('cart_products'))
-            // console.log(cartProductsData)
-            if (cartProductsData) {
-                let temp = ''
-                let totalItemsCount = 0
-                let netTotal = 0
-                cartProductsData.forEach((e) => {
-                    const markup = ` <div class="flex items-center hover:bg-gray-100 px-6 py-5">
-                <div class="flex w-2/5 items-center">
-                    <div class="w-20">
-                        <img class="h-24" src=${e.images.cart} alt="">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <h5 class="font-medium text-sm">${e.name}</h5>
-                        <button onclick="removeItem('${e._id}')" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</button>
-                    </div>
-                </div>
-                <div class="flex justify-center w-1/5">
-                    <button class="hover:text-blue-100 text-gray-600">
-                        <svg class="fill-current w-3" viewBox="0 0 448 512">
-                            <path
-                                d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-                        </svg>
-                    </button>
-                    <input class="mx-2 border text-center w-8" type="text" value="${e.orderQuantity}">
-                    <button class="hover:text-blue-100 text-gray-600">
-                        <svg class="fill-current w-3" viewBox="0 0 448 512">
-                            <path
-                                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-                        </svg>
-                    </button>
-                </div>
-                <span id="cart-item-price" class="text-center w-1/5 font-semibold text-sm">${e.price}</span>
-                <span id="cart-item-total" class="text-center w-1/5 font-semibold text-sm">${e.price * e.orderQuantity}</span>
-            </div>`
-                    temp += markup
-                    totalItemsCount += e.orderQuantity
-                    netTotal += (e.price*e.orderQuantity)
-                })
-
-                wrapper.innerHTML = temp
-                totalItems.innerText = `Items (${totalItemsCount})`
-                totalItems.nextElementSibling.innerText = netTotal
-                totalAmt.innerText = netTotal
-            }
-
-        }
-
-        // delete item
-        function removeItem(id){
-            const cartData = JSON.parse(localStorage.getItem('cart_products'))
-            const updatedList = cartData.filter((e)=>{
-                if(!(e._id === id)) return e
-            })
-            localStorage.setItem('cart_products',JSON.stringify(updatedList))
-            cartProduct()
-        }
-    </script>
+    <script type="module" src="../js/main.js"></script>
+    <script src="../js/newcart.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 
 </html>
