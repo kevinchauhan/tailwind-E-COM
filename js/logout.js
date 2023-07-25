@@ -1,4 +1,4 @@
 function logout(){
     localStorage.removeItem('curr_user')
-    location.href = '/'
+    location.href = '../index.html'
 }
