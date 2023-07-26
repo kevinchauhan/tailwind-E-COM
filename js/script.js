@@ -10,7 +10,12 @@ export function cartCounting(id) {
                 e.cart.forEach((e) => {
                     count += e.orderQuantity
                 })
-                cart.innerText = count
+
+                // for total quantity
+                // cart.innerText = count
+
+                // for only total products
+                cart.innerText = e.cart.length
             }
         }
     })

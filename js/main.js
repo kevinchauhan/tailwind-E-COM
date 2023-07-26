@@ -2,15 +2,18 @@ import productData from "../json-data/productDetails.json" assert {type: 'json'}
 import { cartCounting } from "./script.js";
 window.cartCounting = cartCounting
 window.loadtrend = loadtrend
+window.loadProducts = loadProducts
 
+
+// ---------------------- home page start -------------------------------------------->
 // printing trending products 
 function loadtrend() {
     const trendinProductList = document.getElementById('trending-product-list')
     let trend = ''
     productData.forEach((e, i) => {
         if (i < 8) {
-            const trendMarkup = 
-            `<div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+            const trendMarkup =
+                `<div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
                 <div class="product-card border rounded-lg hover:shadow-lg duration-300 ease-in-out">
                 <div class="border-b relative">
                 <img src=${e.images.cart} alt="">
@@ -46,6 +49,90 @@ function loadtrend() {
     });
     trendinProductList.innerHTML = trend
 }
+// ---------------------- home page end -------------------------------------------->
+
+
+// ---------------------- shop-list page start ---------------------------------->
+function loadProducts(filter = null,price=99999) {
+    const shopList = document.getElementById('shop-list')
+    let trend = ''
+    productData.forEach((e, i) => {
+        if (!filter) {
+            const trendMarkup =
+                    ` <div class="w-full sm:w-1/2 md:w-1/3 px-3 mb-6">
+            <div class="product-card">
+                <div class="bg-slate-100 relative">
+                    <img src=${e.images.cart} alt="">
+                    <div class="card-widget">
+                        <ul class="bg-white rounded-lg border">
+                        <li><button onclick="addToCart('${e._id}')" class="hover:bg-blue-100 hover:text-white border-b rounded-t-lg text-xl px-2 py-1"><i
+                        class="ri-shopping-cart-line"></i></button></li>
+                        <li><button class="hover:bg-blue-100 hover:text-white border-b text-xl px-2 py-1"><i class="ri-eye-line"></i>
+                        </button></li>
+                        <li><button class="hover:bg-blue-100 hover:text-white border-b rounded-b-lg text-xl px-2 py-1"><i class="ri-heart-3-line"></i></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="py-5">
+                    <h6 class="text-sm text-gray-700"><a
+                            class="hover:text-blue-100 duration-300 ease-in capitalize" href="#">${e.category}</a></h6>
+                    <h4 class="text-xl"><a class="hover:text-blue-100 duration-300 ease-in capitalize"
+                            href="#">${e.name}</a></h4>
+                    <p class="text-slate-300">
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <small class="text-gray-600">(${e.reviews.count} Review)</small>
+                    </p>
+                    <h4 class="text-blue-100 font-medium">₹ ${e.price}</h4>
+                </div>
+            </div>
+                        </div>`
+                trend += trendMarkup
+        } else {
+            if (filter === e.category && e.price <= price) {
+                const trendMarkup =
+                    `<div class="w-full sm:w-1/2 md:w-1/3 px-3 mb-6">
+            <div class="product-card">
+                <div class="bg-slate-100 relative">
+                    <img src=${e.images.cart} alt="">
+                    <div class="card-widget">
+                        <ul class="bg-white rounded-lg border">
+                        <li><button onclick="addToCart('${e._id}')" class="hover:bg-blue-100 hover:text-white border-b rounded-t-lg text-xl px-2 py-1"><i
+                        class="ri-shopping-cart-line"></i></button></li>
+                        <li><button class="hover:bg-blue-100 hover:text-white border-b text-xl px-2 py-1"><i class="ri-eye-line"></i>
+                        </button></li>
+                        <li><button class="hover:bg-blue-100 hover:text-white border-b rounded-b-lg text-xl px-2 py-1"><i class="ri-heart-3-line"></i></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="py-5">
+                    <h6 class="text-sm text-gray-700"><a
+                            class="hover:text-blue-100 duration-300 ease-in capitalize" href="#">${e.category}</a></h6>
+                    <h4 class="text-xl"><a class="hover:text-blue-100 duration-300 ease-in capitalize"
+                            href="#">${e.name}</a></h4>
+                    <p class="text-slate-300">
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <i class="ri-star-s-fill"></i>
+                        <small class="text-gray-600">(${e.reviews.count} Review)</small>
+                    </p>
+                    <h4 class="text-blue-100 font-medium">₹ ${e.price}</h4>
+                </div>
+            </div>
+                        </div>`
+                trend += trendMarkup
+            }
+        }
+    })
+    shopList.innerHTML = trend
+}
+// ---------------------- shop-list page end ---------------------------------->
+
 
 // add to cart function
 window.addToCart = addToCart

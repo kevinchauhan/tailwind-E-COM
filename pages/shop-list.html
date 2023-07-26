@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.png">
+    <!-- remix-icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" />
+    <!-- google-font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind-css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- main-css -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body onload="loadProducts()">
+    <!-- header start -->
+    <div class="sticky top-0 z-10">
+        <header class="bg-white border-b">
+            <div class="container mx-auto py-4 flex justify-between items-center">
+                <div class="logo"><a href="./home.html"><img src="../images/logo.svg" alt=""></a></div>
+                <div>
+                    <div class="search-box border-2 border-blue-100 lg:block hidden">
+                        <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
+                            placeholder="Search for Products...">
+                        <select name="" id=""
+                            class="border-s border-gray-300 px-3 cursor-pointer focus-within:outline-none">
+                            <option value="">Select Category</option>
+                            <option value="">Electronics</option>
+                            <option value="">Fashion</option>
+                            <option value="">Beauty</option>
+                        </select>
+                        <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
+                                class="ri-search-line"></i></button>
+                    </div>
+                </div>
+                <div class="icon flex items-center">
+                    <div class="flex items-center me-12">
+                        <span class="w-11 h-11 me-2 border-2 text-2xl rounded-full leading-9 text-center"><i
+                                class="ri-user-line text-gray-500"></i></span>
+                        <div>
+                            <small class="text-gray-400 font-semibold">Hello,</small>
+                            <div class="drop-down text-sm text-gray-500 font-semibold relative">
+                                <button id="user-name">Sign In</button>
+                                <div class="drop-down-menu absolute invisible top-6 -left-2 border bg-white">
+                                    <ul>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5"
+                                                href="cart.html">Cart</a></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5"
+                                                onclick="logout()">Logout</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-2xl text-gray-700">
+                        <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
+                        <a href="#" class="relative  ms-2 hover:text-blue-100">
+                            <i class="ri-heart-3-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
+                        </a>
+                        <a href="cart.html" class="relative ms-2 hover:text-blue-100">
+                            <i class="ri-shopping-bag-line"></i>
+                            <span
+                                class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white"
+                                id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="bg-white shadow-md">
+            <div class="container max-w-screen-xl mx-auto">
+                <div class="flex items-center text-sm justify-between">
+                    <div class="w-1/2 md:w-1/4">
+                        <div
+                            class="bg-blue-100 text-white py-3 px-5 me-7 cursor-pointer hover:bg-blue-300 transition duration-500 ease">
+                            <i class="ri-menu-2-line text-xl align-middle"></i> All Departments <i
+                                class="ri-arrow-down-s-line float-right text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5 lg:block hidden">
+                        <ul class="flex items-center gap-4">
+                            <li><a class="py-3" href="./home.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="./shop-list.html">Shop <i class="ri-arrow-down-s-line"></i></a>
+                            </li>
+                            <li><a class="py-3">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-phone-line text-2xl me-2 text-blue-100 align-middle"></i>
+                        <div>
+                            <small class="text-gray-500 font-semibold">Hotline:</small>
+                            <div class="text-gray-600 font-bold"> +(123)-456-7891</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header end -->
+
+    <!-- producsts-list start -->
+    <div class="container mx-auto py-20 pr-0">
+        <h1 class="text-4xl text-gray-950 font-medium mb-10">Products List</h1>
+
+        <div class="flex flex-wrap">
+            <!-- filter-list -->
+            <div class="w-1/4 pe-6">
+                <div class="category-filter">
+                    <h3 class="font-medium text-lg border-b pb-1">Categories</h3>
+                    <ul class="text-gray-600 text-sm mt-6 px-3" id="filter-category">
+                        <li><button class="hover:text-blue-100 w-full text-start py-2" onclick="loadProducts('headphones')">Headphones</button></li>
+                        <li><button class="hover:text-blue-100 w-full text-start py-2" onclick="loadProducts('bluetooth')">Bluetooth</button></li>
+                        <li><button class="hover:text-blue-100 w-full text-start py-2" onclick="loadProducts('mobile')">Mobile Tablets</button></li>
+                        <li><button class="hover:text-blue-100 w-full text-start py-2" onclick="loadProducts('watch')">Smart Watch</button></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- products -->
+            <div class="w-3/4 flex flex-wrap" id="shop-list">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-3 mb-6">
+                    <div class="product-card">
+                        <div class="bg-slate-100 relative">
+                            <img src="../images/products/bluetooth/bluetooth-1.webp" alt="">
+                            <div class="card-widget">
+                                <ul class="bg-white rounded-lg border">
+                                    <li
+                                        class="hover:bg-blue-100 hover:text-white border-b rounded-t-lg text-xl px-2 py-1">
+                                        <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                                    </li>
+                                    <li class="hover:bg-blue-100 hover:text-white border-b text-xl px-2 py-1"><a
+                                            href="#"><i class="ri-eye-line"></i></a>
+                                    </li>
+                                    <li class="hover:bg-blue-100 hover:text-white rounded-b-lg text-xl px-2 py-1"><a
+                                            href="#"><i class="ri-heart-3-line"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="py-5">
+                            <h6 class="text-sm text-gray-700"><a
+                                    class="hover:text-blue-100 duration-300 ease-in capitalize" href="#">Bluetooth</a>
+                            </h6>
+                            <h4 class="text-xl"><a class="hover:text-blue-100 duration-300 ease-in capitalize"
+                                    href="#">Lenovo smart Watch</a></h4>
+                            <p class="text-slate-300">
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <small class="text-gray-600">(0 Review)</small>
+                            </p>
+                            <h4 class="text-blue-100 font-medium">₹ 1299</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- producsts-list end -->
+
+
+    <script type="module" src="../js/main.js"></script>
+    <!-- authenticate -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+
+</html>

@@ -11,6 +11,9 @@ body{
     padding-left: 0px;
     padding-right: 0px;
 }
+.pr-0{
+    padding-right: 0px;
+}
 
 /* --------------------------- header start --------------------------------- */
 .drop-down:hover .drop-down-menu{
