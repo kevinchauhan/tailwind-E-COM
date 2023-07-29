@@ -26,7 +26,7 @@
             <div class="container mx-auto py-4 flex justify-between items-center">
                 <div class="logo"><a href="./home.html"><img src="../images/logo.svg" alt=""></a></div>
                 <div>
-                    <div class="search-box border-2 border-blue-100 lg:block hidden">
+                    <!-- <div class="search-box border-2 border-blue-100 lg:block hidden">
                         <input type="text" class="px-6 text-md leading-6 focus-within:outline-none"
                             placeholder="Search for Products...">
                         <select name="" id=""
@@ -38,6 +38,15 @@
                         </select>
                         <button class="bg-blue-100 h-full py-1 px-4 text-2xl text-white align-middle"><i
                                 class="ri-search-line"></i></button>
+                    </div> -->
+                    <div class="lg:block hidden">
+                        <ul class="flex items-center gap-4">
+                            <li><a class="py-3 hover:text-blue-100 duration-300 ease-in-out" href="./home.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3 hover:text-blue-100 duration-300 ease-in-out" href="product.html">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3 text-gray-500">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3 text-gray-500">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3 text-gray-500">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="icon flex items-center">
@@ -50,18 +59,16 @@
                                 <button id="user-name">Sign In</button>
                                 <div class="drop-down-menu absolute invisible top-6 -left-2 border bg-white">
                                     <ul>
-                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5"
-                                                href="cart.html">Cart</a></li>
-                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5"
-                                                onclick="logout()">Logout</button></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5" href="cart.html">Cart</a></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5" onclick="logout()">Logout</button></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="text-2xl text-gray-700">
-                        <a href="#" class="hover:text-blue-100"><i class="ri-arrow-up-down-line"></i></a>
-                        <a href="#" class="relative  ms-2 hover:text-blue-100">
+                        <a class="text-gray-400"><i class="ri-arrow-up-down-line"></i></a>
+                        <a class="relative  ms-2 text-gray-400">
                             <i class="ri-heart-3-line"></i>
                             <span
                                 class="absolute top-0 left-3 bg-pink-100 text-white w-5 h-5 block text-xs rounded-full text-center border-2 border-white">0</span>
@@ -76,7 +83,7 @@
                 </div>
             </div>
         </header>
-        <nav class="bg-white shadow-md">
+        <!-- <nav class="bg-white shadow-md">
             <div class="container max-w-screen-xl mx-auto">
                 <div class="flex items-center text-sm justify-between">
                     <div class="w-1/2 md:w-1/4">
@@ -89,12 +96,11 @@
                     <div class="lg:w-3/5 lg:block hidden">
                         <ul class="flex items-center gap-4">
                             <li><a class="py-3" href="./home.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                            <li><a class="py-3">Products <i class="ri-arrow-down-s-line"></i></a></li>
-                            <li><a class="py-3" href="./shop-list.html">Shop <i class="ri-arrow-down-s-line"></i></a>
-                            </li>
-                            <li><a class="py-3">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
-                            <li><a class="py-3">Blog <i class="ri-arrow-down-s-line"></i></a></li>
-                            <li><a class="py-3">Contact <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="./shop-list.html">Shop <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Blog <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3" href="#">Contact <i class="ri-arrow-down-s-line"></i></a></li>
                         </ul>
                     </div>
                     <div class="flex items-center">
@@ -106,7 +112,7 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
     </div>
     <!-- header end -->
 
