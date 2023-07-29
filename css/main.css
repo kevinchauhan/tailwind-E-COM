@@ -1,117 +1,133 @@
-body{
-    font-family: 'Roboto',sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-.container{
-    max-width: 1140px;
-    padding-left: 12px;
-    padding-right: 12px;
+.container {
+  max-width: 1140px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
-.px-0{
-    padding-left: 0px;
-    padding-right: 0px;
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
-.pr-0{
-    padding-right: 0px;
+.pr-0 {
+  padding-right: 0px;
 }
 
 /* --------------------------- header start --------------------------------- */
-.drop-down:hover .drop-down-menu{
-    visibility: visible;
-    opacity: 1;
+.drop-down:hover .drop-down-menu {
+  visibility: visible;
+  opacity: 1;
 }
-.drop-down-menu{
-    opacity: 0;
-    transition: all 0.3s linear;
+.drop-down-menu {
+  opacity: 0;
+  transition: all 0.3s linear;
 }
 /* --------------------------- header end --------------------------------- */
 
 /* --------------------------- category start -------------------------------- */
-.category{
-    background: radial-gradient(95.56% 95.56% at 50% 50%,#fff 0,#bddeff 100%);
-    border-radius: 100%;
-    width: 180px;
-    height: 180px;
+.category {
+  background: radial-gradient(95.56% 95.56% at 50% 50%, #fff 0, #bddeff 100%);
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
 }
-.category img{
-    transition: scale .2s linear;
+.category img {
+  transition: scale 0.2s linear;
 }
-.category:hover img{
-    scale: 1.1;
+.category:hover img {
+  scale: 1.1;
 }
 /* --------------------------- category end -------------------------------- */
 
 /* --------------------------- trending products start -------------------------------- */
-.trending-head-tabs::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 110%;
-    width: 400px;
-    height: 2px;
-    background-color: #f0f2f4;
+.trending-head-tabs::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  width: 400px;
+  height: 2px;
+  background-color: #f0f2f4;
 }
-.trending-head-tabs a.active{
-    color: #000000;
+.trending-head-tabs a.active {
+  color: #000000;
 }
-.product-card img{
-    transition: scale .2s linear;
+.product-card img {
+  transition: scale 0.2s linear;
 }
-.product-card:hover img{
-    scale: 1.06;
-    cursor: pointer;
+.product-card:hover img {
+  scale: 1.06;
+  cursor: pointer;
 }
-.card-widget{
-    position: absolute;
-    left: -10px;
-    bottom: 20px;
-    opacity: 0;
-    transition: all .2s linear;
+.card-widget {
+  position: absolute;
+  left: -10px;
+  bottom: 20px;
+  opacity: 0;
+  transition: all 0.2s linear;
 }
-.product-card:hover .card-widget{
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    opacity: 1;
+.product-card:hover .card-widget {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  opacity: 1;
 }
-@media (max-width:992px) {
-    .trending-head-tabs::after{
-        width: 200px;
-    }
+@media (max-width: 992px) {
+  .trending-head-tabs::after {
+    width: 200px;
+  }
 }
-@media (max-width:768px) {
-    .trending-head-tabs::after{
-        width: 100px;
-    }
+@media (max-width: 768px) {
+  .trending-head-tabs::after {
+    width: 100px;
+  }
 }
-@media (max-width:576px) {
-    .trending-head-tabs::after{
-        width: 100px;
-    }
+@media (max-width: 576px) {
+  .trending-head-tabs::after {
+    width: 100px;
+  }
 }
 /* --------------------------- trending products end -------------------------------- */
 
 /* ------------------------------ product-dteails-page start ------------------------------ */
 /* ------------------------------ product-dteails-page start ------------------------------ */
-.product-details li::before{
-    content: url('../images/check.svg');
-    position: relative;
-    top: 0px;
-    left: 0px;
-    margin-right: 10px;
-    vertical-align: middle;
+.product-details li::before {
+  content: url("../images/check.svg");
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
-.product-detail-nav-tab-indicator{
-    position: absolute;
-    width: 120px;
-    height: 1px;
-    border-top: 1px solid #000000;
-    bottom: 0;
-    left: 0;
+.product-detail-nav-tab-indicator {
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  border-top: 1px solid #000000;
+  bottom: 0;
+  left: 0;
 }
 /* ------------------------------ product-dteails-page end ------------------------------ */
 /* ------------------------------ product-dteails-page end ------------------------------ */
+
+#filter-category button.active {
+  color: #0989ff;
+}
+
+.brand {
+  height: 0;
+  overflow: hidden;
+  transition: all .3s ease-in;
+}
+.brand.active {
+  margin-bottom: 0.75rem;
+}
+.brand button.active{
+    color: #0989ff;
+}
