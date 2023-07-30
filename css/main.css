@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -113,21 +118,24 @@ html {
   bottom: 0;
   left: 0;
 }
-/* ------------------------------ product-dteails-page end ------------------------------ */
-/* ------------------------------ product-dteails-page end ------------------------------ */
+/* ------------------------------ product-details-page end ------------------------------ */
+/* ------------------------------ product-details-page end ------------------------------ */
 
+/* ------------------------------ product-page start ------------------------------ */
+/* ------------------------------ product-page start ------------------------------ */
 #filter-category button.active {
   color: #0989ff;
 }
-
 .brand {
   height: 0;
   overflow: hidden;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .brand.active {
   margin-bottom: 0.75rem;
 }
-.brand button.active{
-    color: #0989ff;
+.brand button.active {
+  color: #0989ff;
 }
+/* ------------------------------ product-page end ------------------------------ */
+/* ------------------------------ product-page end ------------------------------ */
