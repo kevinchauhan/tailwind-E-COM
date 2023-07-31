@@ -62,6 +62,7 @@ const filterBtn = document.querySelectorAll('.filter-btn')
 filterBtn.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         selectedCategory = btn.dataset.filter
+        brandFilter = ''
         filterProducts()
 
         // active button color 

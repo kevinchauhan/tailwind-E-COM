@@ -127,74 +127,79 @@
         <div class="flex flex-wrap">
             <!-- filter-list -->
             <div class="w-1/4 pe-6">
-                <div class="price-filter">
-                    <h3 class="font-medium text-lg border-b pb-1 mb-5">Price</h3>
-                    <div class="px-3 flex flex-wrap justify-between text-gray-700 text-sm">
-                        <span>0</span>
-                        <span id="price-display">9999</span>
-                        <input class="w-full" type="range" name="price-range" id="price-range" min="0" max="9999"
-                            value="9999">
+                <div class="sticky top-20">
+                    <div class="price-filter">
+                        <h3 class="font-medium text-lg border-b pb-1 mb-5">Price</h3>
+                        <div class="px-3 flex flex-wrap justify-between text-gray-700 text-sm">
+                            <span>0</span>
+                            <span id="price-display">9999</span>
+                            <input class="w-full" type="range" name="price-range" id="price-range" min="0" max="9999"
+                                value="9999">
+                        </div>
                     </div>
-                </div>
-                <div class="category-filter mt-8">
-                    <h3 class="font-medium text-lg border-b pb-1">Categories</h3>
-                    <ul class="text-gray-600 text-sm mt-6 px-3" id="filter-category">
-                        <li><button class="hover:text-blue-100 active w-full text-start py-2 filter-btn"
-                                data-filter="">All</button></li>
-                        <li>
-                            <button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
-                                data-filter="headphones">Headphones</button>
+                    <div class="category-filter mt-8">
+                        <h3 class="font-medium text-lg border-b pb-1">Categories</h3>
+                        <ul class="text-gray-600 text-sm mt-6 px-3" id="filter-category">
+                            <li><button class="hover:text-blue-100 active w-full text-start py-2 filter-btn"
+                                    data-filter="">All</button></li>
+                            <li>
+                                <button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
+                                    data-filter="headphones">Headphones</button>
                                 <ul class="brand ps-3">
                                     <li>
-                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn active" data-filter="">All</button>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn active"
+                                            data-filter="">All</button>
                                     </li>
                                     <li>
-                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn" data-filter="boat">Boat</button>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn"
+                                            data-filter="boat">Boat</button>
                                     </li>
                                     <li>
-                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn" data-filter="jbl">JBL</button>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn"
+                                            data-filter="jbl">JBL</button>
                                     </li>
                                 </ul>
-                        </li>
-                        <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
-                                data-filter="bluetooth">Bluetooth</button></li>
-                        <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
-                                data-filter="mobile">Mobile Tablets</button>
-                            <ul class="brand ps-3">
-                                <li>
-                                    <button class="hover:text-blue-100 capitalize py-1 brand-btn active"
-                                        data-filter="">All</button>
-                                </li>
-                                <li>
-                                    <button class="hover:text-blue-100 capitalize py-1 brand-btn"
-                                        data-filter="apple">apple</button>
-                                </li>
-                                <li>
-                                    <button class="hover:text-blue-100 capitalize py-1 brand-btn"
-                                        data-filter="samsung">samsung</button>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
-                                data-filter="watch">Smart Watch</button>
-                            <ul class="brand ps-3">
-                                <li>
-                                    <button class="hover:text-blue-100 capitalize py-1 brand-btn active"
-                                        data-filter="">All</button>
-                                </li>
-                                <li>
-                                    <button class="hover:text-blue-100 capitalize py-1 brand-btn"
-                                        data-filter="sony">sony</button>
-                                </li>
-                                <li>
-                                    <button class="hover:text-blue-100 capitalize py-1 brand-btn"
-                                        data-filter="apple">apple</button>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
-                                data-filter="cpu heat">CPU Heat Pipes</button></li>
-                    </ul>
+                            </li>
+                            <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
+                                    data-filter="bluetooth">Bluetooth</button></li>
+                            <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
+                                    data-filter="mobile">Mobile Tablets</button>
+                                <ul class="brand ps-3">
+                                    <li>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn active"
+                                            data-filter="">All</button>
+                                    </li>
+                                    <li>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn"
+                                            data-filter="apple">apple</button>
+                                    </li>
+                                    <li>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn"
+                                            data-filter="samsung">samsung</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
+                                    data-filter="watch">Smart Watch</button>
+                                <ul class="brand ps-3">
+                                    <li>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn active"
+                                            data-filter="">All</button>
+                                    </li>
+                                    <li>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn"
+                                            data-filter="sony">sony</button>
+                                    </li>
+                                    <li>
+                                        <button class="hover:text-blue-100 capitalize py-1 brand-btn"
+                                            data-filter="apple">apple</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><button class="hover:text-blue-100 w-full text-start py-2 filter-btn"
+                                    data-filter="cpu heat">CPU Heat Pipes</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!-- products -->
