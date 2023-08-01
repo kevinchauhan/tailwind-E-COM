@@ -107,11 +107,14 @@ brandBtn.forEach((btn) => {
 })
 
 // price range
-document.querySelector('#price-range').addEventListener('change', (e) => {
-    document.querySelector('#price-display').innerText = e.target.value
-    priceRange = parseInt(e.target.value)
-    filterProducts()
-})
+const priceBtn = document.querySelector('#price-range')
+if (priceBtn) {
+    priceBtn.addEventListener('change', (e) => {
+        document.querySelector('#price-display').innerText = e.target.value
+        priceRange = parseInt(e.target.value)
+        filterProducts()
+    })
+}
 
 // fitering based on inputs
 function filterProducts() {

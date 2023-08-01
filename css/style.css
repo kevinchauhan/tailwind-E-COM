@@ -604,6 +604,10 @@ video {
   top: 3rem;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
 .top-5 {
   top: 1.25rem;
 }
@@ -614,14 +618,6 @@ video {
 
 .top-full {
   top: 100%;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-20 {
-  top: 5rem;
 }
 
 .-z-10 {
@@ -1241,6 +1237,11 @@ video {
 
 .pr-0 {
   padding-right: 0px;
+}
+
+.ps-2 {
+  -webkit-padding-start: 0.5rem;
+          padding-inline-start: 0.5rem;
 }
 
 .ps-3 {

@@ -33,7 +33,7 @@ function cartProduct() {
                                         d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                                 </svg>
                             </button>
-                            <input class="mx-2 border text-center w-8" type="text" value="${e.orderQuantity}">
+                            <span class="mx-2 border text-center w-8">${e.orderQuantity}</span>
                             <button class="hover:text-blue-100 text-gray-600" onclick='update("incr","${e._id}")'>
                                 <svg class="fill-current w-3" viewBox="0 0 448 512">
                                     <path
