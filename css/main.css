@@ -1,7 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -10,7 +10,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+/* utility classes */
 .container {
   max-width: 1140px;
   padding-left: 12px;
@@ -35,7 +35,10 @@ html {
 }
 /* --------------------------- header end --------------------------------- */
 
-/* --------------------------- category start -------------------------------- */
+
+/* --------------------------- home-page start -------------------------------- */
+/* --------------------------- home-page start -------------------------------- */
+/* ----------------------- category start -------------------------- */
 .category {
   background: radial-gradient(95.56% 95.56% at 50% 50%, #fff 0, #bddeff 100%);
   border-radius: 100%;
@@ -48,9 +51,9 @@ html {
 .category:hover img {
   scale: 1.1;
 }
-/* --------------------------- category end -------------------------------- */
+/* ------------------- category end ------------------------ */
 
-/* --------------------------- trending products start -------------------------------- */
+/* ------------------ trending products start -------------------- */
 .trending-head-tabs::after {
   content: "";
   position: absolute;
@@ -98,7 +101,9 @@ html {
     width: 100px;
   }
 }
-/* --------------------------- trending products end -------------------------------- */
+/* ------------------ trending products end ---------------------- */
+/* --------------------------- home-page end -------------------------------- */
+/* --------------------------- home-page end -------------------------------- */
 
 /* ------------------------------ product-dteails-page start ------------------------------ */
 /* ------------------------------ product-dteails-page start ------------------------------ */
@@ -139,3 +144,25 @@ html {
 }
 /* ------------------------------ product-page end ------------------------------ */
 /* ------------------------------ product-page end ------------------------------ */
+
+/* ------------------------------ signup-page start ------------------------------ */
+/* ------------------------------ signup-page start ------------------------------ */
+#alert-msg {
+  background-color: #000000da;
+  z-index: 10;
+  display: none;
+  opacity: 0;
+  scale: .5;
+}
+#alert-msg.active {
+  display: block;
+  animation: fade 0.3s forwards;
+}
+@keyframes fade {
+  100%{
+    opacity: 1;
+    scale: 1;
+  }
+}
+/* ------------------------------ signup-page end ------------------------------ */
+/* ------------------------------ signup-page end ------------------------------ */

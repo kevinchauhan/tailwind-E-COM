@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body onload="auth('./pages/home.html')">
     <!-- header start -->
     <div class="sticky top-0 z-10">
         <header class="bg-white border-b shadow-md">
@@ -31,7 +31,7 @@
                                 class="ri-user-line text-gray-500"></i></span>
                         <div>
                             <small class="text-gray-400 font-semibold">Hello,</small>
-                            <div class="text-sm text-gray-500 font-semibold"><a href="/">Sign In</a></div>
+                            <div class="text-sm text-gray-500 font-semibold"><a href="./index.html">Sign In</a></div>
                         </div>
                     </div>
                 </div>
@@ -63,32 +63,36 @@
         </div>
     </div>
 
+    <!-- checking weather already logged in or not  -->
+    <script src="./js/auth.js"></script>
 
+    <!-- login form -->
     <script>
         const loginForm = document.loginForm
-        
-        loginForm.addEventListener('submit',(e)=>{
+        loginForm.addEventListener('submit', (e) => {
             e.preventDefault()
             const loginEmail = loginForm.email
             const loginPass = loginForm.password
             const errorMsg = document.querySelectorAll('.error-msg')
-            
+
             const localUserData = JSON.parse(localStorage.getItem('users_data'))
-            if(localUserData){
+            if (localUserData) {
+                let userValidate = false
                 localUserData.forEach(e => {
-                    if(e.personalData.email === loginEmail.value && e.personalData.password === loginPass.value){
-                        localStorage.setItem('curr_user',JSON.stringify(e))
+                    if (e.personalData.email === loginEmail.value && e.personalData.password === loginPass.value) {
+                        localStorage.setItem('curr_user', JSON.stringify(e))
                         location.href = './pages/home.html'
-                    } else {
-                        errorMsg[1].innerText = 'Email or password invalid'
+                        userValidate = true
                     }
                 })
-            } else{
+                if (!userValidate) {
+                    errorMsg[1].innerText = 'Email or password invalid'
+                }
+            } else {
                 errorMsg[0].innerText = 'User not found'
             }
-        })
+        })    
     </script>
 </body>
 
 </html>
-

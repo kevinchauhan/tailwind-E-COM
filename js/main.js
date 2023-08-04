@@ -6,7 +6,7 @@ window.filterProducts = filterProducts
 
 
 // ---------------------- home page start -------------------------------------------->
-// printing trending products 
+// displaying trending products 
 function loadtrend() {
     const trendinProductList = document.getElementById('trending-product-list')
     let trend = ''
@@ -76,8 +76,17 @@ filterBtn.forEach((btn) => {
         dropdown.forEach((ul) => {
             ul.classList.remove('active')
         })
+        
         if (btn.nextElementSibling) {
             btn.nextElementSibling.classList.add('active')
+
+
+            // brand ul resetting style
+            const ul = Array.from(btn.nextElementSibling.children[1].children)
+            ul.forEach((e) => {
+                e.querySelector('button').classList.remove('active')
+            })
+            btn.nextElementSibling.children[1].children[0].children[0].classList.add("active")
         }
 
         // brand dropdwon height animation

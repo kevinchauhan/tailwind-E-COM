@@ -1,4 +1,4 @@
-window.addEventListener('load',authenticate)
+// for other pages
 function authenticate(){
     const currUser = JSON.parse(localStorage.getItem('curr_user'))
     if(currUser){
@@ -7,4 +7,12 @@ function authenticate(){
     } else{
         location.href = '../index.html'
     }
+}  
+
+// for login and signup page
+function auth(url){
+    const currUser = JSON.parse(localStorage.getItem('curr_user'))
+    if(currUser){
+        window.location.href = url
+    } 
 }  

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
-<body>
+<body onload="auth('./home.html')" class="relative">
     <!-- header start -->
     <div class="sticky top-0 z-10">
         <header class="bg-white border-b shadow-md">
@@ -31,7 +31,7 @@
                                 class="ri-user-line text-gray-500"></i></span>
                         <div>
                             <small class="text-gray-400 font-semibold">Hello,</small>
-                            <div class="text-sm text-gray-500 font-semibold"><a href="/">Sign In</a></div>
+                            <div class="text-sm text-gray-500 font-semibold"><a href="../index.html">Sign In</a></div>
                         </div>
                     </div>
                 </div>
@@ -40,114 +40,62 @@
     </div>
     <!-- header end -->
 
-    <div class="w-2/5 mx-auto shadow-md p-12 mt-12">
-        <h1 class="text-4xl font-medium text-center">Sign Up</h1>
-        <div class="mt-12">
-            <form action="" name="signup" class="text-sm">
-                <div class="relative text-sm border focus-within:outline-1 focus-within:outline">
-                    <label for="name" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your Name</label>
-                    <input class="p-5 w-full focus-within:outline-none text-blue-400" type="name" name="name"
-                        placeholder="abc xyz">
-                </div>
-                <p class="error-msg text-red-500"></p>
-                <div class="relative text-sm border focus-within:outline-1 focus-within:outline mt-10">
-                    <label for="email" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your Email</label>
-                    <input class="p-5 w-full focus-within:outline-none text-blue-400" type="email" name="email"
-                        placeholder="abc@gmail.com">
-                </div>
-                <p id="email-check" class="error-msg text-red-500"></p>
-                <div class="relative text-sm border focus-within:outline-1 focus-within:outline mt-10">
-                    <label for="password" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your
-                        password</label>
-                    <input class="p-5 w-full focus-within:outline-none text-blue-400" type="password" name="password"
-                        placeholder="min. 6 character">
-                </div>
-                <p class="error-msg text-red-500"></p>
-                <h6 class="text-sm text-gray-600 mb-5 mt-2">Already have an account? <a href="../index.html"
-                        class="text-blue-100 hover:border-b border-blue-100">Sign In</a></h6>
-                <button class="bg-blue-400 text-white w-full py-3 hover:bg-blue-100 duration-200 ease-in">Sign Up</button>
-            </form>
+    <!-- alert msg start -->
+    <div id="alert-msg" class="absolute w-full h-full">
+        <div
+            class="w-1/2 absolute z-20 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 mx-auto shadow-green-300 mt-5 py-5 text-center bg-white shadow rounded-lg">
+            <span class="w-16 rounded-full mx-auto h-16 shadow text-green-100 text-6xl block"><i
+                    class="ri-check-line"></i></span>
+            <h2 class="text-3xl opacity-70 font-bold">Congrats!</h2>
+            <h3 class="text-gray-500 mb-2">Your account is created!</h3>
+            <h3 class="text-gray-500">please login to continue</h3>
+            <p class="text-gray-400">You are being redirecting to <a href="../index.html"
+                    class="underline text-blue-100">login</a> in <span id="login-counter">0</span></p>
         </div>
     </div>
+    <!-- alert msg end -->
 
-    <script>
-        const signupForm = document.signup
-        signupForm.addEventListener('submit', (e) => {
-            e.preventDefault()
-            const userName = signupForm.name
-            const userEmail = signupForm.email
-            const userPassword = signupForm.password
-            const errorMsg = document.querySelectorAll('.error-msg')
+    <!-- signup form start -->
+    <section class="py-16">
+        <div class="w-2/5 mx-auto shadow-md p-12">
+            <h1 class="text-4xl font-medium text-center">Sign Up</h1>
+            <div class="mt-12">
+                <form action="" name="signup" class="text-sm">
+                    <div class="relative text-sm border focus-within:outline-1 focus-within:outline">
+                        <label for="name" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your Name</label>
+                        <input class="p-5 w-full focus-within:outline-none text-blue-400" type="name" name="name"
+                            placeholder="abc xyz">
+                    </div>
+                    <p class="error-msg text-red-500"></p>
+                    <div class="relative text-sm border focus-within:outline-1 focus-within:outline mt-10">
+                        <label for="email" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your
+                            Email</label>
+                        <input class="p-5 w-full focus-within:outline-none text-blue-400" type="email" name="email"
+                            placeholder="abc@gmail.com">
+                    </div>
+                    <p id="email-check" class="error-msg text-red-500"></p>
+                    <div class="relative text-sm border focus-within:outline-1 focus-within:outline mt-10">
+                        <label for="password" class="absolute -top-3.5 left-4 text-gray-600 bg-white p-1">Your
+                            password</label>
+                        <input class="p-5 w-full focus-within:outline-none text-blue-400" type="password"
+                            name="password" placeholder="min. 6 character">
+                    </div>
+                    <p class="error-msg text-red-500"></p>
+                    <h6 class="text-sm text-gray-600 mb-5 mt-2">Already have an account? <a href="../index.html"
+                            class="text-blue-100 hover:border-b border-blue-100">Sign In</a></h6>
+                    <button class="bg-blue-400 text-white w-full py-3 hover:bg-blue-100 duration-200 ease-in">Sign
+                        Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- signup form end -->
 
-            // validating form inputs
-            let nameError = true
-            let emailError = true
-            let passError = true
 
-            if (userName.value === '') {
-                errorMsg[0].innerHTML = 'please enter name'
-                nameError = true
-            } else {
-                errorMsg[0].innerHTML = ''
-                nameError = false
-            }
-
-            if (userEmail.value === '') {
-                errorMsg[1].innerHTML = 'please enter valid email'
-                emailError = true
-            } else {
-                errorMsg[1].innerHTML = ''
-                emailError = false
-            }
-
-            if (userPassword.value === '') {
-                errorMsg[2].innerHTML = 'please enter password'
-                passError = true
-            } else {
-                errorMsg[2].innerHTML = ''
-                passError = false
-            }
-
-            if (!nameError && !emailError && !passError) {
-                const date = new Date()
-                const userMarkup = {
-                    personalData: {
-                        id: date.getTime(),
-                        name: userName.value,
-                        email: userEmail.value,
-                        password: userPassword.value
-                    }
-                }
-
-                registerUser(userMarkup) // register function called...
-            }
-
-        })
-
-        //  Registering new user
-        function registerUser(userMarkup) {
-            const localUserData = JSON.parse(localStorage.getItem('users_data'))
-            if (localUserData) {
-                const checkEmail = localUserData.some(e => {
-                    if (e.personalData.email === userMarkup.personalData.email) {
-                        return true
-                    }
-                })
-                if (checkEmail) {
-                    document.querySelector('#email-check').innerHTML = 'Email already exists'
-                } else {
-                    localUserData.push(userMarkup)
-                    console.log(localUserData)
-                    localStorage.setItem('users_data', JSON.stringify(localUserData))
-                    location.href = './registered.html'
-                }
-            } else {
-                localStorage.setItem('users_data', JSON.stringify([userMarkup]))
-                location.href = './registered.html'
-            }
-
-        }
-    </script>
+    <!-- checking weather already logged in or not  -->
+    <script src="../js/auth.js"></script>
+    <!-- signup -->
+    <script src="../js/register.js"></script>
 </body>
 
 </html>

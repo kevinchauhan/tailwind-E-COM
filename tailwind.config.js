@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html','./pages/*.html'],
+  content: ['./index.html', './pages/*.html'],
   theme: {
     fontFamily: {
-      roboto: ['Roboto','sans-serif'],
-      oregano: ['Oregano','cursive']
+      roboto: ['Roboto', 'sans-serif'],
+      oregano: ['Oregano', 'cursive']
     },
     extend: {
       colors: {
