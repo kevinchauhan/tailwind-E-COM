@@ -61,7 +61,7 @@ function cartProduct() {
     cartCounting(currUser.personalData.id)
 }
 
-// delete item
+// delete item or delete all
 function removeItem(id) {
     // local datas
     const currUser = JSON.parse(localStorage.getItem('curr_user'))
@@ -69,10 +69,16 @@ function removeItem(id) {
 
     localUserData.some((e) => {
         if (e.personalData.id === currUser.personalData.id) {
-            const updatedList = e.cart.filter((cart) => {
-                if (!(cart._id === id)) return cart
-            })
-            e.cart = updatedList
+            if(id){
+                // removing single item
+                const updatedList = e.cart.filter((cart) => {
+                    if (!(cart._id === id)) return cart
+                })
+                e.cart = updatedList
+            } else{
+                // all cart clear
+                e.cart = []
+            }
         }
     })
     localStorage.setItem('users_data', JSON.stringify(localUserData))

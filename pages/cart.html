@@ -41,8 +41,10 @@
                     </div> -->
                     <div class="lg:block hidden">
                         <ul class="flex items-center gap-4">
-                            <li><a class="py-3 hover:text-blue-100 duration-300 ease-in-out" href="./home.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                            <li><a class="py-3 hover:text-blue-100 duration-300 ease-in-out" href="product.html">Products <i class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3 hover:text-blue-100 duration-300 ease-in-out" href="./home.html">Home <i
+                                        class="ri-arrow-down-s-line"></i></a></li>
+                            <li><a class="py-3 hover:text-blue-100 duration-300 ease-in-out"
+                                    href="product.html">Products <i class="ri-arrow-down-s-line"></i></a></li>
                             <li><a class="py-3 text-gray-500">Coupons <i class="ri-arrow-down-s-line"></i></a></li>
                             <li><a class="py-3 text-gray-500">Blog <i class="ri-arrow-down-s-line"></i></a></li>
                             <li><a class="py-3 text-gray-500">Contact <i class="ri-arrow-down-s-line"></i></a></li>
@@ -59,8 +61,10 @@
                                 <button id="user-name">Sign In</button>
                                 <div class="drop-down-menu absolute invisible top-6 -left-2 border bg-white">
                                     <ul>
-                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5" href="cart.html">Cart</a></li>
-                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5" onclick="logout()">Logout</button></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><a class="px-5"
+                                                href="cart.html">Cart</a></li>
+                                        <li class="border py-1 hover:bg-blue-100 hover:text-white"><button class="px-5"
+                                                onclick="logout()">Logout</button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -161,13 +165,16 @@
                 </div>
                 <!-- product info end -->
 
-                <button onclick="history.back()" class="flex font-semibold text-blue-100 text-sm mt-10">
-                    <svg class="fill-current mr-2 text-blue-100 w-4" viewBox="0 0 448 512">
-                        <path
-                            d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
-                    </svg>
-                    Continue Shopping
-                </button>
+                <div class="flex items-center justify-between pr-5">
+                    <button onclick="history.back()" class="hover:text-blue-300 duration-300 flex font-semibold text-blue-100 text-sm mt-10">
+                        <svg class="fill-current mr-2 w-4" viewBox="0 0 448 512">
+                            <path
+                                d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+                        </svg>
+                        Continue Shopping
+                    </button>
+                    <button onclick="removeItem()" class="hover:text-blue-300 duration-300 font-semibold text-blue-100 text-sm mt-10">Clear All</button>
+                </div>
             </div>
 
             <div id="summary" class="w-full mt-5 lg:mt-0 lg:w-1/4 py-6">
